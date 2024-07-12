@@ -1,7 +1,4 @@
-<script setup lang="ts">
-import logo from "@/assets/logo.webp";
-import { RouterLink } from "vue-router";
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <footer
