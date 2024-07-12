@@ -5,6 +5,10 @@ const changelogs: { date: string; content: string }[] = [
     content: "仮で作った",
   },
 ];
+
+defineExpose({
+  title: "更新履歴",
+});
 </script>
 <template>
   <section class="relative flex h-full">

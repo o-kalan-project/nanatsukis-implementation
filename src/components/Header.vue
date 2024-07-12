@@ -12,7 +12,7 @@ import { RouterLink } from "vue-router";
     <nav class="flex items-center gap-4">
       <RouterLink to="/about">このキャラクターについて</RouterLink>
       <RouterLink to="/terms">利用規約</RouterLink>
-      <RouterLink to="/utau">UTAU</RouterLink>
+      <RouterLink to="/utau">UTAU音源</RouterLink>
       <RouterLink to="/changelog">更新履歴</RouterLink>
     </nav>
   </header>

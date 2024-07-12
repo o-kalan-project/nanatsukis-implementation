@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineExpose({
+  title: "このキャラクターについて",
+});
+</script>
 <template>
   <section class="relative flex h-full">
     <div class="p-4 w-full lg:w-2/3 flex-col mx-auto">
