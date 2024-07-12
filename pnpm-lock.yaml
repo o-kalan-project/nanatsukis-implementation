@@ -8,18 +8,6 @@ importers:
 
   .:
     dependencies:
-      autoprefixer:
-        specifier: ^10.4.19
-        version: 10.4.19(postcss@8.4.39)
-      postcss:
-        specifier: ^8.4.39
-        version: 8.4.39
-      tailwindcss:
-        specifier: ^3.4.4
-        version: 3.4.4
-      unplugin-fonts:
-        specifier: ^1.1.1
-        version: 1.1.1(vite@5.3.3(@types/node@20.14.10)(sass@1.77.8))
       vue:
         specifier: ^3.4.29
         version: 3.4.31(typescript@5.5.3)
@@ -33,12 +21,24 @@ importers:
       '@vitejs/plugin-vue':
         specifier: ^5.0.5
         version: 5.0.5(vite@5.3.3(@types/node@20.14.10)(sass@1.77.8))(vue@3.4.31(typescript@5.5.3))
+      autoprefixer:
+        specifier: ^10.4.19
+        version: 10.4.19(postcss@8.4.39)
+      postcss:
+        specifier: ^8.4.39
+        version: 8.4.39
       sass:
         specifier: ^1.77.8
         version: 1.77.8
+      tailwindcss:
+        specifier: ^3.4.4
+        version: 3.4.4
       typescript:
         specifier: ^5.2.2
         version: 5.5.3
+      unplugin-fonts:
+        specifier: ^1.1.1
+        version: 1.1.1(vite@5.3.3(@types/node@20.14.10)(sass@1.77.8))
       unplugin-vue-router:
         specifier: ^0.10.0
         version: 0.10.0(rollup@4.18.1)(vue-router@4.4.0(vue@3.4.31(typescript@5.5.3)))(vue@3.4.31(typescript@5.5.3))
