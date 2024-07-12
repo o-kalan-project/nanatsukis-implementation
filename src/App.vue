@@ -12,7 +12,15 @@ import portrait from "@/assets/portrait.webp";
       <RouterView />
     </main>
   </div>
-  <img :src="portrait" class="z-0 blur-md absolute pointer-events-none left-0 bottom-0 w-1/2 opacity-25" alt="応歌ラン" />
+  <div
+    class="absolute top-0 left-0 w-full h-full contain-strict"
+  >
+    <img
+      :src="portrait"
+      class="z-0 blur-md absolute pointer-events-none left-[-8rem] bottom-[-8rem] w-1/2 opacity-25"
+      alt="応歌ラン"
+    />
+  </div>
 </template>
 
 <style scoped></style>

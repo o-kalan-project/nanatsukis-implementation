@@ -1,0 +1,22 @@
+<script setup lang="ts">
+const changelogs: { date: string; content: string }[] = [
+  {
+    date: "2024/07/12",
+    content: "仮で作った",
+  },
+];
+</script>
+<template>
+  <section class="relative flex h-full">
+    <div class="p-4 w-full lg:w-2/3 flex-col mx-auto">
+      <h1 class="page-title">更新履歴</h1>
+
+      <div class="flex flex-col gap-2">
+        <div v-for="changelog in changelogs">
+          <h2 class="section-title">{{ changelog.date }}</h2>
+          <p class="text-md">{{ changelog.content }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
