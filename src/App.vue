@@ -66,11 +66,11 @@ const enableScaling = () => {
       </RouterView>
     </main>
   </div>
-  <div class="fixed inset-0 contain-strict">
+  <div class="fixed inset-0 top-24 contain-strict">
     <img
       ref="portraitRef"
       :src="portrait"
-      class="z-0 blur-md absolute pointer-events-none left-[-8rem] top-0 w-1/2 opacity-25"
+      class="z-0 blur-md absolute pointer-events-none left-[-8rem] top-[-4rem] w-1/2 opacity-25 will-change-transform"
       alt="応歌ラン"
     />
   </div>
