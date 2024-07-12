@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router/auto";
-import { routes, handleHotUpdate } from "vue-router/auto-routes";
+import { handleHotUpdate, routes } from "vue-router/auto-routes";
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
 });
 if (import.meta.hot) {
