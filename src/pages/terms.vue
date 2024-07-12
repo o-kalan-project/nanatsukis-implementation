@@ -23,7 +23,7 @@ defineExpose({
 
 .markdown {
   :deep(h2) {
-    @apply section-title mt-2;
+    @apply section-title mt-4;
   }
   :deep(li) {
     list-style-type: "-";

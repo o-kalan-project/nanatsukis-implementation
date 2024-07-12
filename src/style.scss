@@ -12,6 +12,9 @@
 
   @apply text-slate-900;
 }
+body {
+  overflow-y: scroll;
+}
 
 h1 {
   @apply text-3xl font-bold;
