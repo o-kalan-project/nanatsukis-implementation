@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import logo from "@/assets/logo.webp";
-import { useRouter } from "vue-router";
 import { RouterLink } from "vue-router";
 </script>
 
