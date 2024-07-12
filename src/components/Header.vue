@@ -4,7 +4,7 @@ import { RouterLink } from "vue-router";
 </script>
 
 <template>
-  <header class="bg-white px-12 py-6 drop-shadow-sm flex items-center">
+  <header class="bg-white px-12 py-6 drop-shadow-sm flex items-center sticky top-0">
     <RouterLink to="/">
       <img class="h-16" :src="logo" alt="応歌ラン" />
     </RouterLink>

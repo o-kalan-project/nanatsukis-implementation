@@ -1,5 +1,11 @@
 <script setup lang="ts">
-import { ComponentPublicInstance, ref, watch } from "vue";
+import {
+  ComponentPublicInstance,
+  ref,
+  watch,
+  onMounted,
+  onUnmounted,
+} from "vue";
 import { RouterView } from "vue-router";
 import Header from "./components/Header.vue";
 import portrait from "@/assets/portrait.webp";
@@ -16,6 +22,26 @@ watch(view, (newView) => {
   }
 });
 
+const portraitRef = ref<HTMLImageElement | null>(null);
+
+const onScroll = () => {
+  if (!portraitRef.value) return;
+  const html = document.documentElement;
+  const currentPosition = html.scrollTop;
+  const maxScroll = html.scrollHeight - html.clientHeight;
+  const scrollProgress = maxScroll === 0 ? 0 : currentPosition / maxScroll;
+  console.log(currentPosition, maxScroll, scrollProgress)
+
+  portraitRef.value.style.transform = `translateY(${-64 * scrollProgress}px)`;
+};
+onMounted(() => {
+  window.addEventListener("scroll", onScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", onScroll);
+});
+
 const disableScaling = () => {
   document.body.style.overflow = "hidden";
 };
@@ -26,7 +52,7 @@ const enableScaling = () => {
 
 <template>
   <div class="min-h-screen relative grid grid-rows-[auto_1fr] z-10">
-    <Header />
+    <Header class="z-10" />
     <main class="relative">
       <RouterView v-slot="{ Component }">
         <Transition
@@ -40,10 +66,11 @@ const enableScaling = () => {
       </RouterView>
     </main>
   </div>
-  <div class="absolute top-0 left-0 w-full h-full contain-strict">
+  <div class="fixed inset-0 contain-strict">
     <img
+      ref="portraitRef"
       :src="portrait"
-      class="z-0 blur-md absolute pointer-events-none left-[-8rem] bottom-[-8rem] w-1/2 opacity-25"
+      class="z-0 blur-md absolute pointer-events-none left-[-8rem] top-0 w-1/2 opacity-25"
       alt="応歌ラン"
     />
   </div>
