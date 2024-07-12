@@ -15,6 +15,13 @@ watch(view, (newView) => {
       : "応歌ラン";
   }
 });
+
+const disableScaling = () => {
+  document.body.style.overflow = "hidden";
+};
+const enableScaling = () => {
+  document.body.style.overflow = "auto";
+};
 </script>
 
 <template>
@@ -22,7 +29,14 @@ watch(view, (newView) => {
     <Header />
     <main class="relative">
       <RouterView v-slot="{ Component }">
-        <Component ref="view" :is="Component" />
+        <Transition
+          name="page"
+          mode="out-in"
+          @leave="disableScaling"
+          @afterEnter="enableScaling"
+        >
+          <Component ref="view" :is="Component" />
+        </Transition>
       </RouterView>
     </main>
   </div>
@@ -35,4 +49,17 @@ watch(view, (newView) => {
   </div>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+.page-enter-active,
+.page-leave-active {
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
+}
+
+.page-enter-from,
+.page-leave-to {
+  transform: translateY(1rem);
+  opacity: 0;
+}
+</style>
