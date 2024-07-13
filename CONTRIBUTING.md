@@ -19,6 +19,8 @@
 
 ## セットアップ
 
+[Node.js](https://nodejs.org/en) v20を入れましょう。
+
 ```bash
 # pnpmをインストール
 npm install -g pnpm
