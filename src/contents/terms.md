@@ -19,11 +19,11 @@
 **A：** 以下のクレジットの明記をお願いします。
 公式イラスト：
 
-> ©2024 Fil,Sabita All Rigts Reserved.
+> ©2024 Fil, Sabita All Rights Reserved.
 
 ロゴ：
 
-> ©2024 kokutou All Rigts Reserved.
+> ©2024 kokutou All Rights Reserved.
 
 説明欄や画像、動画のいずれかに入っていれば大丈夫です！
 
