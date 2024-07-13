@@ -12,7 +12,11 @@
 
   @apply text-slate-900;
 }
+html {
+  width: 100vw;
+}
 body {
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 

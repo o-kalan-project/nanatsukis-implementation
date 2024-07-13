@@ -31,7 +31,6 @@ const onScroll = () => {
   const currentPosition = html.scrollTop;
   const maxScroll = html.scrollHeight - html.clientHeight;
   const scrollProgress = maxScroll === 0 ? 0 : currentPosition / maxScroll;
-  console.log(currentPosition, maxScroll, scrollProgress);
 
   portraitRef.value.style.transform = `translateY(${-64 * scrollProgress}px)`;
 };
