@@ -24,18 +24,36 @@ h1 {
   @apply text-3xl font-bold;
 }
 
-.page-title {
-  @apply text-theme border-theme heading-border;
+.theme-shadow {
+  filter: drop-shadow(0 0 0.2rem theme("colors.theme.100"));
+}
 
-  filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 1));
+.page-title {
+  @apply text-theme-base border-theme-base heading-border theme-shadow;
 }
 
 h2 {
-  @apply text-xl;
+  @apply text-2xl font-medium;
 }
 
 .section-title {
+  @apply border-slate-900/50 heading-border theme-shadow;
+}
+
+h3 {
+  @apply text-xl;
+}
+
+.sub-section-title {
   @apply border-slate-900/50 heading-border;
+}
+
+em {
+  @apply font-medium;
+
+  em {
+    @apply font-bold;
+  }
 }
 
 .heading-border {

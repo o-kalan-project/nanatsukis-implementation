@@ -14,7 +14,7 @@ export default defineConfig({
         families: [
           {
             name: "Zen Kaku Gothic New",
-            styles: "wght@400;700",
+            styles: "wght@400;500;700",
           },
         ],
       },
