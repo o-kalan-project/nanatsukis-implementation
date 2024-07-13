@@ -8,6 +8,8 @@ import portrait from "@/assets/portrait.webp";
         'flex justify-center flex-col',
         'lg:pl-4 lg:w-2/5',
         'max-lg:w-full max-lg:px-4',
+        'max-md:-mt-20',
+        'md:-mt-28',
       ]"
     >
       <h1 class="page-title">応歌ランとは</h1>
