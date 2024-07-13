@@ -2,6 +2,7 @@
 
 ## 技術スタック
 
+- パッケージマネージャー：[pnpm](https://pnpm.io)
 - 全体：
   - [Vite](https://vitejs.dev/)
   - [Vue.js](https://ja.vuejs.org/)
@@ -16,6 +17,19 @@
 
 拡張機能で`Vue`（`Volar`）、`TypeScript`、`Tailwind CSS`を入れるのを推奨。
 あんまり複雑なことはしていないはずです。
+
+## セットアップ
+
+```bash
+# pnpmをインストール
+npm install -g pnpm
+
+# このサイトのライブラリをインストール
+pnpm i
+
+# 開発版起動
+pnpm run dev
+```
 
 ## ファイル構成
 
