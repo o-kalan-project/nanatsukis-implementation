@@ -23,6 +23,7 @@ export default defineConfig({
       name: "vite-plugin-copy-index-html",
       apply: "build",
       enforce: "post",
+      // GitHub Pagesはhtmlファイルがページ毎に必要なので、index.htmlをコピーしてページ毎に生成する。
       async generateBundle(_, bundle) {
         const indexHtml = bundle["index.html"];
         if (!indexHtml || indexHtml.type !== "asset") {

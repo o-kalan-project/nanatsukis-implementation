@@ -1,18 +1,42 @@
 <script setup lang="ts">
-import { marked } from "marked";
+import { Marked, Parser, Renderer } from "marked";
 
 const props = defineProps<{
   source: string;
 }>();
 
-// headingを一段階下げる
-const html = (
-  marked.parse(props.source, {
-    breaks: true,
-  }) as string
-).replaceAll(/<(\/?)h(\d)>/g, (_, p1, p2) => {
-  return `<${p1}h${parseInt(p2) + 1}>`;
+const marked = new Marked();
+const originalRenderer = new Renderer();
+originalRenderer.parser = new Parser();
+
+marked.use({
+  breaks: true,
+  useNewRenderer: true,
+  renderer: {
+    heading({ text, depth }) {
+      console.log(text, depth);
+      return `<h${depth + 1}>${text}</h${depth + 1}>`;
+    },
+    table(table) {
+      // /kvtable の実装
+      if (!(table.header[0].text === "/kvtable" && table.header.length === 2)) {
+        return originalRenderer.table(table);
+      }
+      let result = "<table class='kvtable'>";
+      for (const row of table.rows) {
+        result += "<tr>";
+        result += `<td class="key">${row[0].text}</td>`;
+        result += `<td class="value">${row[1].text}</td>`;
+        result += "</tr>";
+      }
+      result += "</table>";
+      return result;
+    },
+  },
 });
+
+// headingを一段階下げる
+const html = marked.parse(props.source) as string;
 </script>
 <template>
   <div v-html="html" class="markdown" />
@@ -42,6 +66,16 @@ const html = (
   }
   strong {
     @apply text-theme-base theme-shadow;
+  }
+
+  .kvtable {
+    .key {
+      @apply font-medium text-theme-base text-right min-w-40;
+
+      &:after {
+        content: "：";
+      }
+    }
   }
 }
 </style>

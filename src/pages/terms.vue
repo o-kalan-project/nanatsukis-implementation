@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Markdown from '@/components/Markdown.vue';
-import terms from '@/assets/terms.md?raw';
+import terms from '@/contents/terms.md?raw';
 
 defineExpose({
   title: "利用規約",
