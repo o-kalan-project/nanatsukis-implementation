@@ -10,10 +10,9 @@
   - [Vue Router](https://router.vuejs.org/)
   - [Unplugin Vue Router](https://uvr.esm.is/introduction)
 - スタイリング：
-  - [sass](https://sass-lang.com/)
+  - [sass](https://sass-lang.com/)、使ってるのはscssです。
   - [Tailwind CSS](https://tailwindcss.com/)
-- Markdown：
-  - [marked](https://marked.js.org/)
+- Markdown：[marked](https://marked.js.org/)
 
 拡張機能で`Vue`（`Volar`）、`TypeScript`、`Tailwind CSS`を入れるのを推奨。
 あんまり複雑なことはしていないはずです。
