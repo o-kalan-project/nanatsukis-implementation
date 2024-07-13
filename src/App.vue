@@ -20,6 +20,7 @@ watch(view, (newView) => {
     document.title = newViewData.title
       ? `${newViewData.title} | 応歌ラン`
       : "応歌ラン";
+    document.documentElement.scrollTop = 0;
   }
 });
 
