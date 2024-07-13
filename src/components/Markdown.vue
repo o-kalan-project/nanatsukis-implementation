@@ -52,8 +52,13 @@ const html = marked.parse(props.source) as string;
     @apply sub-section-title mt-4;
   }
   li {
-    list-style-type: "-";
+    list-style-type: "\2022";
     @apply ml-2 pl-2;
+    &::marker {
+      color: theme("colors.theme.base");
+      font-weight: bold;
+      @apply theme-shadow;
+    }
   }
   blockquote {
     @apply my-1 pl-2 border-l-2 border-slate-500 text-slate-700;

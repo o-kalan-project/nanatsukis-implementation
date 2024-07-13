@@ -73,11 +73,11 @@
 
 公式イラスト：
 
-> ©2024 Fil,Sabita All Rigts Reserved.
+> ©2024 Fil, Sabita All Rights Reserved.
 
 ロゴ：
 
-> ©2024 kokutou All Rigts Reserved.
+> ©2024 kokutou All Rights Reserved.
 
 - 応歌ランの利用にあたり、利用者間、または利用者と第三者との間で問題が生じた場合、当サークルは一切の責任を負いません。
   利用規約の変更や追加によって起こった問題も同じです。
