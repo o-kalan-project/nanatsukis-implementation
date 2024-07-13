@@ -21,21 +21,19 @@ const isMenuOpen = ref(false);
       class="hidden max-md:block h-12 w-12 cursor-pointer"
     />
 
-    <Transition name="menu">
-      <nav
-        :class="[
-          'menu gap-4',
-          'flex md:items-center',
-          'max-md:flex-col max-md:fixed max-md:top-24 max-md:h-[calc(100vh_-_6rem)] max-md:right-0 max-md:bg-white max-md:p-4',
-          isMenuOpen ? 'menu-open' : 'menu-closed',
-        ]"
-      >
-        <RouterLink to="/about">このキャラクターについて</RouterLink>
-        <RouterLink to="/terms">利用規約</RouterLink>
-        <RouterLink to="/utau">UTAU音源</RouterLink>
-        <RouterLink to="/changelog">更新履歴</RouterLink>
-      </nav>
-    </Transition>
+    <nav
+      :class="[
+        'menu gap-4',
+        'flex md:items-center',
+        'max-md:flex-col max-md:fixed max-md:top-24 max-md:h-[calc(100vh_-_6rem)] max-md:right-0 max-md:bg-white max-md:p-4',
+        isMenuOpen ? 'menu-open' : 'menu-closed',
+      ]"
+    >
+      <RouterLink to="/about">このキャラクターについて</RouterLink>
+      <RouterLink to="/terms">利用規約</RouterLink>
+      <RouterLink to="/utau">UTAU音源</RouterLink>
+      <RouterLink to="/changelog">更新履歴</RouterLink>
+    </nav>
   </header>
 </template>
 

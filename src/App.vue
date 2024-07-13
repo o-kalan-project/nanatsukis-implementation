@@ -29,10 +29,8 @@ const onScroll = () => {
   if (!portraitRef.value) return;
   const html = document.documentElement;
   const currentPosition = html.scrollTop;
-  const maxScroll = html.scrollHeight - html.clientHeight;
-  const scrollProgress = maxScroll === 0 ? 0 : currentPosition / maxScroll;
 
-  portraitRef.value.style.transform = `translateY(${-64 * scrollProgress}px)`;
+  portraitRef.value.style.transform = `translateY(${currentPosition / -8}px)`;
 };
 onMounted(() => {
   window.addEventListener("scroll", onScroll);
@@ -59,7 +57,7 @@ onUnmounted(() => {
     <img
       ref="portraitRef"
       :src="portrait"
-      class="z-0 blur-md absolute left-[-8rem] top-[-4rem] w-1/2 opacity-25 will-change-transform"
+      class="z-0 blur-md absolute left-0 md:left-[-8rem] top-[-4rem] w-full md:w-1/2 opacity-25 will-change-transform"
       alt="応歌ラン"
     />
   </div>
