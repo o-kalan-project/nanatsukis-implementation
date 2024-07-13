@@ -9,10 +9,14 @@ const isMenuOpen = ref(false);
 
 <template>
   <header
-    class="header bg-white px-6 md:px-12 h-24 drop-shadow-sm flex items-center sticky top-0"
+    :class="[
+      'header bg-white drop-shadow-sm flex items-center sticky top-0',
+      'max-md:px-6 max-md:h-16',
+      'md:px-12 md:h-24',
+    ]"
   >
     <RouterLink to="/">
-      <img class="logo h-16" :src="logo" alt="応歌ラン" />
+      <img class="logo max-md:h-12 md:h-16" :src="logo" alt="応歌ラン" />
     </RouterLink>
     <div class="flex-grow" />
     <Component
@@ -25,7 +29,7 @@ const isMenuOpen = ref(false);
       :class="[
         'menu gap-4',
         'flex md:items-center',
-        'max-md:flex-col max-md:fixed max-md:top-24 max-md:h-[calc(100vh_-_6rem)] max-md:right-0 max-md:bg-white max-md:p-4',
+        'max-md:flex-col max-md:fixed max-md:top-16 max-md:h-[calc(100lvh_-_4rem)] max-md:right-0 max-md:bg-white max-md:p-4',
         isMenuOpen ? 'menu-open' : 'menu-closed',
       ]"
     >

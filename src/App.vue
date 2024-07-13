@@ -54,7 +54,7 @@ onUnmounted(() => {
     </main>
   </div>
   <Footer />
-  <div class="fixed left-0 top-24 w-full h-lvh contain-strict pointer-events-none">
+  <div class="fixed left-0 max-md:top-16 md:top-24 w-full h-lvh contain-strict pointer-events-none">
     <img
       ref="portraitRef"
       :src="portrait"
