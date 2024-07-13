@@ -12,7 +12,7 @@ const isMenuOpen = ref(false);
     class="header bg-white px-6 md:px-12 h-24 drop-shadow-sm flex items-center sticky top-0"
   >
     <RouterLink to="/">
-      <img class="h-16" :src="logo" alt="応歌ラン" />
+      <img class="logo h-16" :src="logo" alt="応歌ラン" />
     </RouterLink>
     <div class="flex-grow" />
     <Component
@@ -38,8 +38,28 @@ const isMenuOpen = ref(false);
 </template>
 
 <style lang="scss">
+@use "@/style.scss";
+
 .header {
   position: -webkit-sticky;
+}
+@media (screen(md)) {
+  .logo {
+    transition: filter 0.2s;
+    filter: drop-shadow(0 0 0.5rem transparent);
+
+    &:hover {
+      filter: drop-shadow(0 0 0.5rem #{theme("colors.theme.base")}80);
+    }
+  }
+  .menu {
+    & > a {
+      transition: color 0.2s;
+      &:hover {
+        @apply text-theme-base;
+      }
+    }
+  }
 }
 @media not (screen(md)) {
   .menu {
