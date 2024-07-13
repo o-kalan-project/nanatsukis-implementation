@@ -58,7 +58,7 @@ onUnmounted(() => {
     <img
       ref="portraitRef"
       :src="portrait"
-      class="z-0 blur-md absolute left-0 md:left-[-8rem] top-[-4rem] w-full md:w-1/2 opacity-25 will-change-transform"
+      class="z-0 blur-md absolute left-0 md:left-[-8rem] top-0 w-full md:w-1/2 opacity-25 will-change-transform"
       alt="応歌ラン"
     />
   </div>
