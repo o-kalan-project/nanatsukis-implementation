@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import {
-  ComponentPublicInstance,
   ref,
   watch,
   onMounted,
@@ -11,14 +10,11 @@ import portrait from "@/assets/portrait.webp";
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 
-const view = ref<ComponentPublicInstance<typeof RouterView> | null>(null);
+const view = ref<{ title?: string } | null>(null);
 watch(view, (newView) => {
   if (newView) {
-    const newViewData = newView as {
-      title?: string;
-    };
-    document.title = newViewData.title
-      ? `${newViewData.title} | 応歌ラン`
+    document.title = newView.title
+      ? `${newView.title} | 応歌ラン`
       : "応歌ラン";
     document.documentElement.scrollTop = 0;
   }
