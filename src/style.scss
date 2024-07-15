@@ -59,3 +59,16 @@ em {
 .heading-border {
   @apply pb-2 border-b-[1px] mb-2;
 }
+
+button {
+  @apply text-theme-100 border-theme-base bg-theme-base duration-[0.25s] cursor-pointer px-[1.2em] py-[0.6em] rounded-lg;
+}
+button:hover {
+  @apply bg-theme-350 transition-colors;
+}
+button:active {
+  @apply bg-theme-300 transition-colors;
+}
+button:disabled {
+  @apply bg-theme-300 transition-colors cursor-not-allowed;
+}
