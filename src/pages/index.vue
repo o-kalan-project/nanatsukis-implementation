@@ -17,8 +17,8 @@ import portrait from "@/assets/portrait.webp";
         応歌ラン（おうか らん）とは、2024年6月8日のニコニコ動画サイバー攻撃事件を発端とし、ニコニコ動画を応援することを目的に有志が集まり制作したオリジナルキャラクターです。
       </p>
     </div>
-    <div class="max-lg:hidden relative lg:w-1/3 contain-strict">
-      <img :src="portrait" class="ml-auto h-full" alt="応歌ラン" />
+    <div class="max-lg:hidden relative lg:w-1/3 contain-strict grid place-items-center">
+      <img :src="portrait" class="ml-auto w-full max-h-full object-contain" alt="応歌ラン" />
     </div>
   </section>
 </template>
