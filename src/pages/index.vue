@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import portrait from "@/assets/portrait.webp?h=1920&imagetools";
+import portrait from "@/assets/portrait.webp?h=1080&imagetools";
 </script>
 <template>
   <section class="relative h-full box-border pt-4 flex mx-auto lg:justify-end">
