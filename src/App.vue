@@ -1,10 +1,5 @@
 <script setup lang="ts">
-import {
-  ref,
-  watch,
-  onMounted,
-  onUnmounted,
-} from "vue";
+import { ref, watch, onMounted, onUnmounted } from "vue";
 import { RouterView } from "vue-router";
 import portrait from "@/assets/portrait.webp";
 import Header from "./components/Header.vue";
@@ -13,10 +8,7 @@ import Footer from "./components/Footer.vue";
 const view = ref<{ title?: string } | null>(null);
 watch(view, (newView) => {
   if (newView) {
-    document.title = newView.title
-      ? `${newView.title} | 応歌ラン`
-      : "応歌ラン";
-    document.documentElement.scrollTop = 0;
+    document.title = newView.title ? `${newView.title} | 応歌ラン` : "応歌ラン";
   }
 });
 
@@ -50,7 +42,9 @@ onUnmounted(() => {
     </main>
   </div>
   <Footer />
-  <div class="fixed left-0 max-md:top-16 md:top-24 w-full h-lvh contain-strict pointer-events-none">
+  <div
+    class="fixed left-0 max-md:top-16 md:top-24 w-full h-lvh contain-strict pointer-events-none"
+  >
     <img
       ref="portraitRef"
       :src="portrait"
@@ -71,6 +65,11 @@ onUnmounted(() => {
 .page-enter-from,
 .page-leave-to {
   transform: translateY(1rem);
+
   opacity: 0;
+
+  @media (prefers-reduced-motion) {
+    transform: none;
+  }
 }
 </style>
