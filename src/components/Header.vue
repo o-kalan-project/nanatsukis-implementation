@@ -2,8 +2,8 @@
 import { ref } from "vue";
 import { RouterLink } from "vue-router";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/solid";
-import logo from "@/assets/logo.webp?h=150&imagetools";
-import largerLogo from "@/assets/logo.webp?h=300&imagetools";
+import logo from "@/assets/logo.webp?w=150&imagetools";
+import largerLogo from "@/assets/logo.webp?w=300&imagetools";
 
 const isMenuOpen = ref(false);
 </script>
