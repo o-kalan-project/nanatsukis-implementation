@@ -47,6 +47,9 @@ const isMenuOpen = ref(false);
 .header {
   position: -webkit-sticky;
 }
+.router-link-active {
+  @apply text-theme-base;
+}
 @media (screen(md)) {
   .logo {
     transition: filter 0.2s;
