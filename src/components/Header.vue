@@ -2,7 +2,8 @@
 import { ref } from "vue";
 import { RouterLink } from "vue-router";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/solid";
-import logo from "@/assets/logo.webp";
+import logo from "@/assets/logo.webp?h=150&imagetools";
+import largerLogo from "@/assets/logo.webp?h=300&imagetools";
 
 const isMenuOpen = ref(false);
 </script>
@@ -16,7 +17,12 @@ const isMenuOpen = ref(false);
     ]"
   >
     <RouterLink to="/">
-      <img class="logo max-md:h-12 md:h-16" :src="logo" alt="応歌ラン" />
+      <img
+        class="logo max-md:h-12 md:h-16 aspect-[150/64]"
+        height="64"
+        :srcset="`${logo} 1x, ${largerLogo} 2x`"
+        alt="応歌ラン"
+      />
     </RouterLink>
     <div class="flex-grow" />
     <Component
