@@ -1,10 +1,19 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import { RouterLink } from "vue-router";
+import { ref, watch } from "vue";
+import { RouterLink, useRoute } from "vue-router";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/solid";
 import logo from "@/assets/logo.webp?w=150;300;450;600&as=srcset&imagetools";
 
 const isMenuOpen = ref(false);
+
+const router = useRoute();
+
+watch(
+  () => router.fullPath,
+  () => {
+    isMenuOpen.value = false;
+  },
+);
 </script>
 
 <template>

@@ -11,16 +11,6 @@ export default defineConfig({
     vueRouter(),
     vue(),
     imagetools(),
-    fonts({
-      google: {
-        families: [
-          {
-            name: "Zen Kaku Gothic New",
-            styles: "wght@400;500;700",
-          },
-        ],
-      },
-    }),
     {
       name: "vite-plugin-copy-index-html",
       apply: "build",

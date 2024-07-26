@@ -2,7 +2,7 @@
 import portrait from "@/assets/portrait.webp?h=480;960;1080&as=srcset&imagetools";
 </script>
 <template>
-  <section class="relative h-full box-border pt-4 flex mx-auto lg:justify-end">
+  <section class="relative h-[calc(100vh_-_6rem)] box-border pt-4 flex mx-auto lg:justify-end">
     <div
       :class="[
         'flex justify-center flex-col',
@@ -17,12 +17,10 @@ import portrait from "@/assets/portrait.webp?h=480;960;1080&as=srcset&imagetools
         応歌ラン（おうか らん）とは、2024年6月8日のニコニコ動画サイバー攻撃事件を発端とし、ニコニコ動画を応援することを目的に有志が集まり制作したオリジナルキャラクターです。
       </p>
     </div>
-    <div
-      class="max-lg:hidden relative lg:w-1/3 contain-strict grid place-items-center"
-    >
+    <div class="max-lg:hidden lg:w-1/3">
       <img
         :srcset="portrait"
-        class="ml-auto w-full max-h-full object-contain aspect-[1852/2682]"
+        class="relative w-full h-full object-contain"
         alt="応歌ラン"
       />
     </div>
