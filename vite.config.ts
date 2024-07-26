@@ -1,6 +1,5 @@
 import fs from "fs/promises";
 import vue from "@vitejs/plugin-vue";
-import fonts from "unplugin-fonts/vite";
 import vueRouter from "unplugin-vue-router/vite";
 import { imagetools } from "vite-imagetools";
 import { defineConfig } from "vite";
