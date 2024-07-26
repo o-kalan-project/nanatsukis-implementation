@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import portrait from "@/assets/portrait.webp?h=1080&imagetools";
+import portrait from "@/assets/portrait.webp?h=480;960;1080&as=srcset&imagetools";
 </script>
 <template>
   <section class="relative h-full box-border pt-4 flex mx-auto lg:justify-end">
@@ -21,7 +21,7 @@ import portrait from "@/assets/portrait.webp?h=1080&imagetools";
       class="max-lg:hidden relative lg:w-1/3 contain-strict grid place-items-center"
     >
       <img
-        :src="portrait"
+        :srcset="portrait"
         class="ml-auto w-full max-h-full object-contain aspect-[1852/2682]"
         alt="応歌ラン"
       />

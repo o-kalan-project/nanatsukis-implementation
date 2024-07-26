@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watch, onMounted, onUnmounted } from "vue";
 import { RouterView } from "vue-router";
-import portrait from "@/assets/portrait.webp?h=480&imagetools";
+import portrait from "@/assets/portrait.webp?h=40&imagetools";
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 

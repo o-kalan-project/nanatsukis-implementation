@@ -14,7 +14,6 @@ marked.use({
   useNewRenderer: true,
   renderer: {
     heading({ text, depth }) {
-      console.log(text, depth);
       return `<h${depth + 1}>${text}</h${depth + 1}>`;
     },
     table(table) {
