@@ -12,6 +12,7 @@ export const createApp = ViteSSG(
     base: import.meta.env.BASE_URL,
     routes: [
       ...routes,
+      // [...path] を404として認識させるハック
       {
         ...routes.find((route) => route.name === "/[...path]")!,
         path: "/404",
