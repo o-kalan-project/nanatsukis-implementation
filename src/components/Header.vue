@@ -50,7 +50,7 @@ watch(
       <RouterLink to="/about">このキャラクターについて</RouterLink>
       <RouterLink to="/terms">利用規約</RouterLink>
       <RouterLink to="/utau">UTAU音源</RouterLink>
-      <RouterLink to="/changelog">更新履歴</RouterLink>
+      <RouterLink to="/history">年表</RouterLink>
     </nav>
   </header>
 </template>

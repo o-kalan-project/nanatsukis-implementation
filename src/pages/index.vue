@@ -1,5 +1,25 @@
 <script setup lang="ts">
+import { useHead } from "@unhead/vue";
 import portrait from "@/assets/portrait.webp?h=480;960;1080&as=srcset&imagetools";
+import favicon from "@/assets/favicon.webp";
+
+useHead({
+  title: "応歌ラン",
+  meta: [
+    {
+      name: "description",
+      content: "応歌ラン（おうか らん）とは、2024年6月8日のニコニコ動画サイバー攻撃事件を発端とし、ニコニコ動画を応援することを目的に有志が集まり制作したオリジナルキャラクターです。",
+    },
+    {
+      property: "og:image",
+      content: favicon,
+    },
+    {
+      name: "twitter:card",
+      content: "summary",
+    }
+  ],
+});
 </script>
 <template>
   <section class="relative h-[calc(100vh_-_6rem)] box-border pt-4 flex mx-auto lg:justify-end">

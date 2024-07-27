@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import { useHead } from "@unhead/vue";
 import Markdown from '@/components/Markdown.vue';
 import terms from '@/contents/terms.md?raw';
 
-defineExpose({
-  title: "利用規約",
+useHead({
+  title: "利用規約 | 応歌ラン",
 });
 </script>
 <template>

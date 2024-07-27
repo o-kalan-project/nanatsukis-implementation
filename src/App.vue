@@ -1,15 +1,18 @@
 <script setup lang="ts">
-import { ref, watch, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
+import { useHead } from "@unhead/vue";
 import { RouterView } from "vue-router";
 import portrait from "@/assets/portrait.webp?h=40&imagetools";
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 
-const view = ref<{ title?: string } | null>(null);
-watch(view, (newView) => {
-  if (newView) {
-    document.title = newView.title ? `${newView.title} | 応歌ラン` : "応歌ラン";
-  }
+useHead({
+  meta: [
+    {
+      name: "theme-color",
+      content: "#f6baca",
+    },
+  ],
 });
 
 const portraitRef = ref<HTMLImageElement | null>(null);

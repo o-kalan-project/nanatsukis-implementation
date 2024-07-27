@@ -1,6 +1,8 @@
 <script setup lang="ts">
-defineExpose({
-  title: "404",
+import { useHead } from "@unhead/vue";
+
+useHead({
+  title: "404 | 応歌ラン",
 });
 </script>
 <template>

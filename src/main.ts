@@ -1,9 +1,31 @@
 import "@fontsource/zen-kaku-gothic-new/400.css";
 import "@fontsource/zen-kaku-gothic-new/500.css";
 import "@fontsource/zen-kaku-gothic-new/700.css";
-import { createApp } from "vue";
 import "./style.scss";
+import { handleHotUpdate, routes } from "vue-router/auto-routes";
+import { ViteSSG } from "vite-ssg";
 import App from "./App.vue";
-import router from "./router.ts";
 
-createApp(App).use(router).mount("#app");
+export const createApp = ViteSSG(
+  App,
+  {
+    base: import.meta.env.BASE_URL,
+    routes: [
+      ...routes,
+      {
+        ...routes.find((route) => route.name === "/[...path]")!,
+        path: "/404",
+        name: "/404",
+      },
+    ],
+    scrollBehavior() {
+      return {
+        top: 0,
+        behavior: "smooth",
+      };
+    },
+  },
+  ({ router }) => {
+    handleHotUpdate(router);
+  },
+);
