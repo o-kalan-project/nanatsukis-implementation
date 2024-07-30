@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { Marked, Parser, Renderer } from "marked";
+import { Parser as BudouXParser, jaModel } from "budoux";
 
 const props = defineProps<{
   source: string;
 }>();
 
 const marked = new Marked();
+const budouxParser = new BudouXParser(jaModel);
 const originalRenderer = new Renderer();
 originalRenderer.parser = new Parser();
 
@@ -17,10 +19,11 @@ marked.use({
     heading({ text, depth }) {
       return `<h${depth + 1}>${text}</h${depth + 1}>`;
     },
-    // // budouxを適用する
-    // text(token) {
-    //   return `<budoux-ja>${token.text}</budoux-ja>`
-    // },
+    // budouxを適用する
+    text(token) {
+      const parsed = budouxParser.parse(token.text);
+      return `<p>${parsed.join("<wbr>")}</p>`;
+    },
     table(table) {
       // /kvtable の実装
       if (!(table.header[0].text === "/kvtable" && table.header.length === 2)) {

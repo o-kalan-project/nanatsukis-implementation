@@ -48,14 +48,14 @@ const download = (url: string) => {
             :disabled="!agree"
             @click="download('https://example.com')"
           >
-            単独音をダウンロード
+            単独音音源を<wbr />ダウンロード
           </button>
           <button
             class="button download-button"
             :disabled="!agree"
             @click="download('https://example.com')"
           >
-            連続音をダウンロード
+            連続音音源を<wbr />ダウンロード
           </button>
         </div>
       </article>
@@ -104,11 +104,16 @@ const download = (url: string) => {
   }
 
   img {
-    @apply w-full h-auto drop-shadow-md;
+    @apply w-full  drop-shadow-md;
+    @apply lg:aspect-video lg:object-contain;
   }
 
   .download-section {
     @apply flex pt-2 border-theme-200 border-t-[1px] gap-2;
+  }
+
+  .download-button {
+    @apply whitespace-pre-wrap break-keep;
   }
 }
 </style>
