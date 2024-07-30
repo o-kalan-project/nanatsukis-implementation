@@ -18,6 +18,10 @@ useHead({
   <section class="relative flex h-full">
     <main class="main-content">
       <PageTitle>このキャラクターについて</PageTitle>
+      <iframe
+        src="https://embed.nicovideo.jp/watch/sm36080909"
+        class="max-md:w-full lg:h-[40vh] mx-auto aspect-video"
+      />
       <Markdown :source="profile" />
     </main>
   </section>
