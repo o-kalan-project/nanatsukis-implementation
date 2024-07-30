@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import PageTitle from "@/components/PageTitle.vue";
 import { useHead } from "@unhead/vue";
 
 const downloadable = false;
@@ -16,7 +17,7 @@ useHead({
 <template>
   <section class="relative flex h-full">
     <div class="p-4 w-full lg:w-2/3 flex-col mx-auto">
-      <h1 class="page-title">UTAU音源</h1>
+      <PageTitle>UTAU音源</PageTitle>
       配布してるよ～（してない）
       <br />
       <a

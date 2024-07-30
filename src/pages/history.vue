@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import PageTitle from "@/components/PageTitle.vue";
 import { useHead } from "@unhead/vue";
 
 const changelogs: { date: string; content: string }[] = [
@@ -13,8 +14,7 @@ useHead({
   meta: [
     {
       name: "description",
-      content:
-        "応歌ランの歴史を振り返ります。",
+      content: "応歌ランの歴史を振り返ります。",
     },
   ],
 });
@@ -22,7 +22,7 @@ useHead({
 <template>
   <section class="relative flex h-full">
     <div class="p-4 w-full lg:w-2/3 flex-col mx-auto">
-      <h1 class="page-title">年表</h1>
+      <PageTitle>年表</PageTitle>
 
       <div class="flex flex-col gap-2">
         <div v-for="changelog in changelogs">

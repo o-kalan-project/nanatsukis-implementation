@@ -2,6 +2,7 @@
 import { useHead } from "@unhead/vue";
 import Markdown from "@/components/Markdown.vue";
 import profile from "@/contents/profile.md?raw";
+import PageTitle from "@/components/PageTitle.vue";
 
 useHead({
   title: "このキャラクターについて | 応歌ラン",
@@ -15,8 +16,8 @@ useHead({
 </script>
 <template>
   <section class="relative flex h-full">
-    <div class="p-4 w-full lg:w-2/3 flex-col mx-auto">
-      <h1 class="page-title">このキャラクターについて</h1>
+    <div class="p-4 w-full mx-auto">
+      <PageTitle>このキャラクターについて</PageTitle>
       <Markdown :source="profile" />
     </div>
   </section>

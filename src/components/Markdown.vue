@@ -13,8 +13,13 @@ marked.use({
   breaks: true,
   useNewRenderer: true,
   renderer: {
+    // headingを一段階下げる
     heading({ text, depth }) {
       return `<h${depth + 1}>${text}</h${depth + 1}>`;
+    },
+    // budouxを適用する
+    text(token) {
+      return `<budoux-ja>${token.text}</budoux-ja>`
     },
     table(table) {
       // /kvtable の実装
@@ -34,7 +39,6 @@ marked.use({
   },
 });
 
-// headingを一段階下げる
 const html = marked.parse(props.source) as string;
 </script>
 <template>

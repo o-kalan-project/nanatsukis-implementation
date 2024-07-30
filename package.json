@@ -12,6 +12,7 @@
     "@fontsource/zen-kaku-gothic-new": "^5.0.19",
     "@heroicons/vue": "^2.1.5",
     "@unhead/vue": "^1.9.16",
+    "budoux": "^0.6.2",
     "marked": "^13.0.2",
     "vue": "^3.4.29",
     "vue-router": "^4.4.0"

@@ -28,10 +28,6 @@ h1 {
   filter: drop-shadow(0 0 0.2rem theme("colors.theme.100"));
 }
 
-.page-title {
-  @apply text-theme-base border-theme-base heading-border theme-shadow;
-}
-
 h2 {
   @apply text-2xl font-medium;
 }
