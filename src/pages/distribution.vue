@@ -7,6 +7,7 @@ import Paragraph from "@/components/Paragraph.vue";
 import Checkbox from "@/components/Checkbox.vue";
 import utauImage from "@/assets/utau.webp?w=250;500;750;1000&as=srcset&imagetools";
 import coeiroinkImage from "@/assets/coeiroink.webp?w=250;500;750;1000&as=srcset&imagetools";
+import { computed } from "vue";
 
 useHead({
   title: "素材配布 | 応歌ラン",
@@ -20,18 +21,16 @@ useHead({
 
 const agree = ref(false);
 
-const download = (url: string) => {
-  if (!agree.value) return;
-
-  window.open(url, "_blank");
-};
+const agreeHref = computed(() => {
+  return agree.value ? true : undefined;
+});
 </script>
 <template>
   <main class="main-content">
     <PageTitle>素材配布</PageTitle>
     <Paragraph> 応歌ランの二次創作素材を配布しています。 </Paragraph>
     <Checkbox v-model="agree">
-      <RouterLink to="/terms">利用規約</RouterLink>に同意する
+      <RouterLink class="link" to="/terms">利用規約</RouterLink>に同意する
     </Checkbox>
 
     <div class="flex flex-wrap gap-2 mt-2">
@@ -43,20 +42,22 @@ const download = (url: string) => {
           UTAUで使える音源です。単独音・連続音を用意しています。
         </Paragraph>
         <div class="download-section">
-          <button
+          <a
             class="button download-button"
-            :disabled="!agree"
-            @click="download('https://example.com')"
+            :class="{ disabled: !agree }"
+            :href="agreeHref && 'https://example.com'"
+            target="_blank"
           >
             <budoux-ja>単独音音源をダウンロード</budoux-ja>
-          </button>
-          <button
+          </a>
+          <a
             class="button download-button"
-            :disabled="!agree"
-            @click="download('https://example.com')"
+            :class="{ disabled: !agree }"
+            :href="agreeHref && 'https://example.com'"
+            target="_blank"
           >
             <budoux-ja>連続音音源をダウンロード</budoux-ja>
-          </button>
+          </a>
         </div>
       </article>
       <article class="card">
@@ -65,13 +66,14 @@ const download = (url: string) => {
         <div class="flex-grow" />
         <Paragraph> Coeiroinkで使える音源です。 </Paragraph>
         <div class="download-section">
-          <button
+          <a
             class="button download-button"
-            :disabled="!agree"
-            @click="download('https://example.com')"
+            :class="{ disabled: !agree }"
+            :href="agreeHref && 'https://example.com'"
+            target="_blank"
           >
             ダウンロード
-          </button>
+          </a>
         </div>
       </article>
       <article class="card">
@@ -82,13 +84,14 @@ const download = (url: string) => {
           >実況などに使える立ち絵素材です。（TODO：ちゃんとした画像を用意する、YMMとか？）</Paragraph
         >
         <div class="download-section">
-          <button
+          <a
             class="button download-button"
-            :disabled="!agree"
-            @click="download('https://example.com')"
+            :class="{ disabled: !agree }"
+            :href="agreeHref && 'https://example.com'"
+            target="_blank"
           >
             ダウンロード
-          </button>
+          </a>
         </div>
       </article>
     </div>
