@@ -19,7 +19,8 @@ marked.use({
     },
     // budouxを適用する
     text(token) {
-      return `<budoux-ja>${token.text}</budoux-ja>`;
+      const html = originalRenderer.text(token);
+      return `<budoux-ja>${html}</budoux-ja>`;
     },
     table(table) {
       // /kvtable の実装
