@@ -21,7 +21,7 @@ useHead({
 </script>
 <template>
   <section class="relative flex h-full">
-    <div class="p-4 w-full lg:w-2/3 flex-col mx-auto">
+    <main class="main-content">
       <PageTitle>年表</PageTitle>
 
       <div class="flex flex-col gap-2">
@@ -30,6 +30,6 @@ useHead({
           <p class="text-md">{{ changelog.content }}</p>
         </div>
       </div>
-    </div>
+    </main>
   </section>
 </template>

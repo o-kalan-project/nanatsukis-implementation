@@ -16,9 +16,9 @@ useHead({
 </script>
 <template>
   <section class="relative flex h-full">
-    <div class="p-4 w-full mx-auto">
+    <main class="main-content">
       <PageTitle>このキャラクターについて</PageTitle>
       <Markdown :source="profile" />
-    </div>
+    </main>
   </section>
 </template>
