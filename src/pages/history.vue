@@ -1,13 +1,8 @@
 <script setup lang="ts">
 import PageTitle from "@/components/PageTitle.vue";
 import { useHead } from "@unhead/vue";
-
-const changelogs: { date: string; content: string }[] = [
-  {
-    date: "2024/07/12",
-    content: "仮で作った",
-  },
-];
+import history from "@/contents/history.md?raw";
+import Markdown from "@/components/Markdown.vue";
 
 useHead({
   title: "年表 | 応歌ラン",
@@ -24,12 +19,7 @@ useHead({
     <main class="main-content">
       <PageTitle>年表</PageTitle>
 
-      <div class="flex flex-col gap-2">
-        <div v-for="changelog in changelogs">
-          <h2 class="section-title">{{ changelog.date }}</h2>
-          <p class="text-md">{{ changelog.content }}</p>
-        </div>
-      </div>
+      <Markdown :source="history" />
     </main>
   </section>
 </template>
