@@ -48,14 +48,14 @@ const download = (url: string) => {
             :disabled="!agree"
             @click="download('https://example.com')"
           >
-            <budoux-ja>単独音をダウンロード</budoux-ja>
+            単独音をダウンロード
           </button>
           <button
             class="button download-button"
             :disabled="!agree"
             @click="download('https://example.com')"
           >
-            <budoux-ja>連続音をダウンロード</budoux-ja>
+            連続音をダウンロード
           </button>
         </div>
       </article>
@@ -70,7 +70,7 @@ const download = (url: string) => {
             :disabled="!agree"
             @click="download('https://example.com')"
           >
-            <budoux-ja>ダウンロード</budoux-ja>
+            ダウンロード
           </button>
         </div>
       </article>
@@ -87,7 +87,7 @@ const download = (url: string) => {
             :disabled="!agree"
             @click="download('https://example.com')"
           >
-            <budoux-ja>ダウンロード</budoux-ja>
+            ダウンロード
           </button>
         </div>
       </article>

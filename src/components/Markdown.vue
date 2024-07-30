@@ -17,10 +17,10 @@ marked.use({
     heading({ text, depth }) {
       return `<h${depth + 1}>${text}</h${depth + 1}>`;
     },
-    // budouxを適用する
-    text(token) {
-      return `<budoux-ja>${token.text}</budoux-ja>`
-    },
+    // // budouxを適用する
+    // text(token) {
+    //   return `<budoux-ja>${token.text}</budoux-ja>`
+    // },
     table(table) {
       // /kvtable の実装
       if (!(table.header[0].text === "/kvtable" && table.header.length === 2)) {

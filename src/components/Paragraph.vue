@@ -1,7 +1,5 @@
 <template>
-  <p>
-    <budoux-ja>
-      <slot />
-    </budoux-ja>
+  <p class="text-md">
+    <slot />
   </p>
 </template>

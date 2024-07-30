@@ -1,8 +1,6 @@
 <template>
   <h1 class="page-title">
-    <budoux-ja>
-      <slot />
-    </budoux-ja>
+    <slot />
   </h1>
 </template>
 

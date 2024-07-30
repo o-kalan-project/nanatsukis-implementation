@@ -5,17 +5,7 @@ import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    vueRouter(),
-    vue({
-      template: {
-        compilerOptions: {
-          isCustomElement: (tag) => ["budoux-ja"].includes(tag),
-        },
-      },
-    }),
-    imagetools(),
-  ],
+  plugins: [vueRouter(), vue({}), imagetools()],
   resolve: {
     alias: {
       "@": "/src",
