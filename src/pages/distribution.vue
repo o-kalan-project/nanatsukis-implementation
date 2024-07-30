@@ -48,14 +48,14 @@ const download = (url: string) => {
             :disabled="!agree"
             @click="download('https://example.com')"
           >
-            単独音音源を<wbr />ダウンロード
+            <budoux-ja>単独音音源をダウンロード</budoux-ja>
           </button>
           <button
             class="button download-button"
             :disabled="!agree"
             @click="download('https://example.com')"
           >
-            連続音音源を<wbr />ダウンロード
+            <budoux-ja>連続音音源をダウンロード</budoux-ja>
           </button>
         </div>
       </article>

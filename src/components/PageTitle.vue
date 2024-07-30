@@ -1,6 +1,6 @@
 <template>
-  <h1 class="page-title whitespace-pre-wrap break-keep">
-    <slot />
+  <h1 class="page-title">
+    <budoux-ja><slot /></budoux-ja>
   </h1>
 </template>
 

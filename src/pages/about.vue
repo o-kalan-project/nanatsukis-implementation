@@ -17,7 +17,7 @@ useHead({
 <template>
   <section class="relative flex h-full">
     <main class="main-content">
-      <PageTitle>このキャラクターに<wbr />ついて</PageTitle>
+      <PageTitle>このキャラクターについて</PageTitle>
       <iframe
         src="https://embed.nicovideo.jp/watch/sm43690833"
         class="max-md:w-full lg:h-[40vh] mx-auto aspect-video"

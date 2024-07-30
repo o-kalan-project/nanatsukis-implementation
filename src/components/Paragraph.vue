@@ -1,5 +1,5 @@
 <template>
   <p class="text-md">
-    <slot />
+    <budoux-ja><slot /></budoux-ja>
   </p>
 </template>
