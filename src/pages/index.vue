@@ -4,6 +4,15 @@ import portrait from "@/assets/portrait.webp?h=480;960;1080&as=srcset&imagetools
 import favicon from "@/assets/favicon.webp";
 import PageTitle from "@/components/PageTitle.vue";
 import Paragraph from "@/components/Paragraph.vue";
+import { onMounted, ref } from "vue";
+
+const videoId = ref<string | undefined>();
+onMounted(() => {
+  // 動画ガチャ
+  const videoIds = ["sm43690833"];
+  const randomIndex = Math.floor(Math.random() * videoIds.length);
+  videoId.value = videoIds[randomIndex];
+});
 
 useHead({
   title: "応歌ラン",
@@ -42,7 +51,11 @@ useHead({
         応歌ラン（おうか
         らん）とは、2024年6月8日のニコニコ動画サイバー攻撃事件を発端とし、ニコニコ動画を応援することを目的に有志が集まり制作したオリジナルキャラクターです。
       </Paragraph>
-      <iframe src="https://embed.nicovideo.jp/watch/sm36080909" class="mt-2 w-full aspect-video"/>
+      <iframe
+        :key="videoId"
+        :src="videoId && `https://embed.nicovideo.jp/watch/${videoId}`"
+        class="mt-2 w-full aspect-video"
+      />
     </div>
     <div class="max-lg:hidden lg:w-1/3">
       <img
