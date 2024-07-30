@@ -42,7 +42,7 @@ useHead({
         応歌ラン（おうか
         らん）とは、2024年6月8日のニコニコ動画サイバー攻撃事件を発端とし、ニコニコ動画を応援することを目的に有志が集まり制作したオリジナルキャラクターです。
       </Paragraph>
-      <iframe src="https://embed.nicovideo.jp/watch/sm36080909" class="w-full aspect-video"/>
+      <iframe src="https://embed.nicovideo.jp/watch/sm36080909" class="mt-2 w-full aspect-video"/>
     </div>
     <div class="max-lg:hidden lg:w-1/3">
       <img
