@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
 import { useHead } from "@unhead/vue";
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import PageTitle from "@/components/PageTitle.vue";
 import Paragraph from "@/components/Paragraph.vue";
 import Checkbox from "@/components/Checkbox.vue";
-import utauImage from "@/assets/utau.webp?w=250;500;750;1000&as=srcset&imagetools";
-import coeiroinkImage from "@/assets/coeiroink.webp?w=250;500;750;1000&as=srcset&imagetools";
-import { computed } from "vue";
+import utauImage from "@/assets/distribution/utau.webp?w=250;500;750;1000&as=srcset&imagetools";
+import coeiroinkImage from "@/assets/distribution/coeiroink.webp?w=250;500;750;1000&as=srcset&imagetools";
 
 useHead({
   title: "素材配布 | 応歌ラン",
