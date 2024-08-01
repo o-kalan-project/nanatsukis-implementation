@@ -26,6 +26,9 @@ const isCurrentPage = (path: string) => {
 };
 
 const onClickLink = (path: string) => {
+  if (path === route.fullPath) {
+    return;
+  }
   loadingPage.value = path;
 };
 </script>
