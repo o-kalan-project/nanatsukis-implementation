@@ -29,9 +29,11 @@ const agreeHref = computed(() => {
   <main class="main-content">
     <PageTitle>素材配布</PageTitle>
     <Paragraph> 応歌ランの二次創作素材を配布しています。 </Paragraph>
-    <Checkbox v-model="agree">
-      <RouterLink class="link" to="/terms">利用規約</RouterLink>に同意する
-    </Checkbox>
+    <div class="mt-2">
+      <Checkbox v-model="agree">
+        <RouterLink class="link" to="/terms">利用規約</RouterLink>に同意する
+      </Checkbox>
+    </div>
 
     <div class="flex flex-wrap gap-2 mt-2">
       <article class="card">
