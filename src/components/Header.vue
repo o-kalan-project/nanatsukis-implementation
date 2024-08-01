@@ -5,15 +5,29 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/solid";
 import logo from "@/assets/logo.webp?w=150;300;450;600&as=srcset&imagetools";
 
 const isMenuOpen = ref(false);
+const loadingPage = ref<string | undefined>(undefined);
 
-const router = useRoute();
+const route = useRoute();
 
 watch(
-  () => router.fullPath,
+  () => route.fullPath,
   () => {
     isMenuOpen.value = false;
+    loadingPage.value = undefined;
   },
+  { immediate: true },
 );
+
+const isCurrentPage = (path: string) => {
+  if (loadingPage.value) {
+    return loadingPage.value === path;
+  }
+  return route.fullPath === path;
+};
+
+const onClickLink = (path: string) => {
+  loadingPage.value = path;
+};
 </script>
 
 <template>
@@ -24,7 +38,20 @@ watch(
       'md:px-12 md:h-24',
     ]"
   >
-    <RouterLink to="/">
+    <Teleport to="body">
+      <div
+        class="fixed inset-0 bg-white transition-opacity duration-300 z-50"
+        :style="{
+          opacity: loadingPage ? 0.5 : 0,
+          pointerEvents: loadingPage ? 'auto' : 'none',
+        }"
+      />
+    </Teleport>
+    <RouterLink
+      to="/"
+      :class="[isCurrentPage('/') && 'current-page']"
+      @click="onClickLink('/')"
+    >
       <img
         class="logo max-md:h-12 md:h-16 aspect-[150/64]"
         height="64"
@@ -47,10 +74,30 @@ watch(
         isMenuOpen ? 'menu-open' : 'menu-closed',
       ]"
     >
-      <RouterLink to="/about">このキャラクターについて</RouterLink>
-      <RouterLink to="/terms">利用規約</RouterLink>
-      <RouterLink to="/distribution">素材配布</RouterLink>
-      <RouterLink to="/history">年表</RouterLink>
+      <RouterLink
+        @click="onClickLink('/about')"
+        :class="[isCurrentPage('/about') && 'current-page']"
+        to="/about"
+        >このキャラクターについて</RouterLink
+      >
+      <RouterLink
+        @click="onClickLink('/terms')"
+        :class="[isCurrentPage('/terms') && 'current-page']"
+        to="/terms"
+        >利用規約</RouterLink
+      >
+      <RouterLink
+        :class="[isCurrentPage('/distribution') && 'current-page']"
+        @click="onClickLink('/distribution')"
+        to="/distribution"
+        >素材配布</RouterLink
+      >
+      <RouterLink
+        :class="[isCurrentPage('/history') && 'current-page']"
+        @click="onClickLink('/history')"
+        to="/history"
+        >年表</RouterLink
+      >
     </nav>
   </header>
 </template>
@@ -59,9 +106,9 @@ watch(
 @use "@/style.scss";
 
 .header {
-  position: -webkit-sticky;
+  position: sticky;
 }
-.router-link-active {
+.current-page {
   @apply text-theme-base;
 }
 @media (screen(md)) {
