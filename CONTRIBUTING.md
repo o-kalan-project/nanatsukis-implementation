@@ -6,6 +6,7 @@
 - 全体：
   - [Vite](https://vitejs.dev/)
   - [Vue.js](https://ja.vuejs.org/)
+  - [vite-ssg](https://github.com/antfu-collective/vite-ssg)
 - ルーティング：
   - [Vue Router](https://router.vuejs.org/)
   - [Unplugin Vue Router](https://uvr.esm.is/introduction)
@@ -35,12 +36,11 @@ pnpm run dev
 ## ファイル構成
 
 ```yml
-vite.config.ts: Viteの設定ファイル。GitHub Pagesで良い感じにするために色々やってるのでコメントを参照。
+vite.config.ts: Viteの設定ファイル。
 
 src/:
   main.ts: エントリーポイント。ここからアプリケーションを起動する。
   App.vue: 全体のレイアウト。ヘッダーとかフッターとか。
-  router.ts: ルーティングの設定ファイル。
   style.scss: 全体で使えるスタイル。
 
   assets/: 画像置き場。`.webp`形式を推奨。
@@ -54,6 +54,10 @@ src/:
 ### 見出し周り
 
 自動的に一段下げられます。（`#` は `<h2>` 相当）
+
+### テキスト
+
+[budoux](https://developers-jp.googleblog.com/2023/09/budoux-adobe.html)が導入されているので、良い感じに改行されてくれます。
 
 ### `/kvtable`
 
@@ -70,4 +74,4 @@ src/:
 ## ページの作り方
 
 基本的には既存ページをコピーすればいいはず。
-ページのタイトルは`defineExpose`の`title`に書くと良い感じになります。
+useHeadあたりは良い感じにして下さい。
