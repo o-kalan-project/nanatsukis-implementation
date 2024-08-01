@@ -7,6 +7,7 @@ import Paragraph from "@/components/Paragraph.vue";
 import Checkbox from "@/components/Checkbox.vue";
 import utauImage from "@/assets/distribution/utau.webp?w=250;500;750;1000&as=srcset&imagetools";
 import coeiroinkImage from "@/assets/distribution/coeiroink.webp?w=250;500;750;1000&as=srcset&imagetools";
+import dummyImage from "@/assets/distribution/dummy.webp?w=250;500;750;1000&as=srcset&imagetools";
 
 useHead({
   title: "素材配布 | 応歌ラン",
@@ -77,7 +78,7 @@ const agreeHref = computed(() => {
       </article>
       <article class="card">
         <h2>立ち絵素材</h2>
-        <img :srcset="coeiroinkImage" />
+        <img :srcset="dummyImage" />
         <div class="flex-grow" />
         <Paragraph
           >実況などに使える立ち絵素材です。（TODO：ちゃんとした画像を用意する、YMMとか？）</Paragraph
