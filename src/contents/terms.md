@@ -94,7 +94,7 @@
 - ニコニコサービスに投稿する際は、できるだけ「応歌ラン」やそれに準じたタグをつけてください。ただし、棲み分けをしたい場合などはこの限りではありません。
 - その他SNSに投稿する際は、「<a href="https://twitter.com/intent/tweet?hashtags=応歌ラン" target="_blank" rel="noopener noreferrer">#応歌ラン</a>」のタグだけでなく、「<a href="https://twitter.com/intent/tweet?hashtags=ニコニコにしてやんよ" target="_blank" rel="noopener noreferrer">#ニコニコにしてやんよ</a>」のタグをつけていただくことを推奨します。運営が喜びます。
 - その他気になる点がございましたら、運営までお問い合わせください。
-  お問い合わせ先：<https://form.run/@o-kalan-question>{:target="_blank"}
+  お問い合わせ先：<a href="https://form.run/@o-kalan-question" target="_blank" rel="noopener noreferrer">https://form.run/@o-kalan-question</a>
 
 ## さいごに
 
