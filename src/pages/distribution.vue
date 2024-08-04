@@ -2,7 +2,7 @@
 import PageTitle from "@/components/PageTitle.vue";
 import Paragraph from "@/components/Paragraph.vue";
 import { useHead } from "@unhead/vue";
-import { computed, ref } from "vue";
+// import { computed, ref } from "vue";
 
 useHead({
   title: "素材配布 | 応歌ラン",
@@ -14,11 +14,11 @@ useHead({
   ],
 });
 
-const agree = ref(false);
+// const agree = ref(false);
 
-const agreeHref = computed(() => {
-  return agree.value ? true : undefined;
-});
+// const agreeHref = computed(() => {
+//   return agree.value ? true : undefined;
+// });
 </script>
 <template>
   <main class="main-content">
