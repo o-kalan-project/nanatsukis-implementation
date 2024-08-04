@@ -1,13 +1,8 @@
 <script setup lang="ts">
-import { RouterLink } from "vue-router";
-import { useHead } from "@unhead/vue";
-import { ref, computed } from "vue";
 import PageTitle from "@/components/PageTitle.vue";
 import Paragraph from "@/components/Paragraph.vue";
-import Checkbox from "@/components/Checkbox.vue";
-import utauImage from "@/assets/distribution/utau.webp?w=250;500;750;1000&as=srcset&imagetools";
-import coeiroinkImage from "@/assets/distribution/coeiroink.webp?w=250;500;750;1000&as=srcset&imagetools";
-import dummyImage from "@/assets/distribution/dummy.webp?w=250;500;750;1000&as=srcset&imagetools";
+import { useHead } from "@unhead/vue";
+import { computed, ref } from "vue";
 
 useHead({
   title: "素材配布 | 応歌ラン",
@@ -29,12 +24,12 @@ const agreeHref = computed(() => {
   <main class="main-content">
     <PageTitle>素材配布</PageTitle>
     <Paragraph> 応歌ランの二次創作素材を配布しています。 </Paragraph>
-    <div class="mt-2">
+    <h2>現在準備中</h2>
+    <!-- <div class="mt-2">
       <Checkbox v-model="agree">
         <RouterLink class="link" to="/terms">利用規約</RouterLink>に同意する
       </Checkbox>
     </div>
-
     <div class="flex flex-wrap gap-2 mt-2">
       <article class="card">
         <h2>UTAU音源</h2>
@@ -96,7 +91,7 @@ const agreeHref = computed(() => {
           </a>
         </div>
       </article>
-    </div>
+    </div> -->
   </main>
 </template>
 
