@@ -30,6 +30,10 @@ useHead({
       name: "twitter:card",
       content: "summary",
     },
+    {
+      name:"google-site-verification",
+      content:"3lZWA6cgLOUtPT3xgYlmUG5ttP0oyitKwn__4ek2wTo",
+    },
   ],
 });
 </script>
