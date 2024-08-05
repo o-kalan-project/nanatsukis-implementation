@@ -1,9 +1,13 @@
 <script setup lang="ts">
+import coeiroinkImage from "@/assets/distribution/coeiroink.webp?w=250;500;750;1000&as=srcset&imagetools";
+import dummyImage from "@/assets/distribution/dummy.webp?w=250;500;750;1000&as=srcset&imagetools";
+import utauImage from "@/assets/distribution/utau.webp?w=250;500;750;1000&as=srcset&imagetools";
+import Checkbox from "@/components/Checkbox.vue";
 import PageTitle from "@/components/PageTitle.vue";
 import Paragraph from "@/components/Paragraph.vue";
 import { useHead } from "@unhead/vue";
-// import { computed, ref } from "vue";
-
+import { computed, ref } from "vue";
+import { RouterLink } from "vue-router";
 useHead({
   title: "素材配布 | 応歌ラン",
   meta: [
@@ -14,18 +18,17 @@ useHead({
   ],
 });
 
-// const agree = ref(false);
+const agree = ref(false);
 
-// const agreeHref = computed(() => {
-//   return agree.value ? true : undefined;
-// });
+const agreeHref = computed(() => {
+  return agree.value ? true : undefined;
+});
 </script>
 <template>
   <main class="main-content">
     <PageTitle>素材配布</PageTitle>
     <Paragraph> 応歌ランの二次創作素材を配布しています。 </Paragraph>
-    <h2>現在準備中</h2>
-    <!-- <div class="mt-2">
+    <div class="mt-2">
       <Checkbox v-model="agree">
         <RouterLink class="link" to="/terms">利用規約</RouterLink>に同意する
       </Checkbox>
@@ -36,24 +39,25 @@ useHead({
         <img :srcset="utauImage" />
         <div class="flex-grow" />
         <Paragraph>
-          UTAUで使える音源です。単独音・連続音を用意しています。
+          <!-- UTAUで使える音源です。単独音・連続音を用意しています。 -->
+           UTAUで使える音源です。現在は単独音のみが利用可能です。
         </Paragraph>
         <div class="download-section">
           <a
             class="button download-button"
             :class="{ disabled: !agree }"
-            :href="agreeHref && 'https://example.com'"
+            :href="agreeHref && 'https://github.com/o-kalan-project/o-ka-utau/releases/latest/download/O-kalan-CV.zip'"
             target="_blank"
           >
             <budoux-ja>単独音音源をダウンロード</budoux-ja>
           </a>
           <a
             class="button download-button"
-            :class="{ disabled: !agree }"
+            :class="{ disabled: true }"
             :href="agreeHref && 'https://example.com'"
             target="_blank"
           >
-            <budoux-ja>連続音音源をダウンロード</budoux-ja>
+            <budoux-ja><!--連続音音源をダウンロード-->現在準備中</budoux-ja>
           </a>
         </div>
       </article>
@@ -65,11 +69,12 @@ useHead({
         <div class="download-section">
           <a
             class="button download-button"
-            :class="{ disabled: !agree }"
+            :class="{ disabled: true }"
             :href="agreeHref && 'https://example.com'"
             target="_blank"
           >
-            ダウンロード
+            <!--（ダウンロード -->
+            現在準備中
           </a>
         </div>
       </article>
@@ -78,20 +83,21 @@ useHead({
         <img :srcset="dummyImage" />
         <div class="flex-grow" />
         <Paragraph
-          >実況などに使える立ち絵素材です。（TODO：ちゃんとした画像を用意する、YMMとか？）</Paragraph
+          >実況などに使える立ち絵素材です。<!--（TODO：ちゃんとした画像を用意する、YMMとか？）--></Paragraph
         >
         <div class="download-section">
           <a
             class="button download-button"
-            :class="{ disabled: !agree }"
+            :class="{ disabled: true }"
             :href="agreeHref && 'https://example.com'"
             target="_blank"
           >
-            ダウンロード
+            <!-- ダウンロード -->
+            現在準備中
           </a>
         </div>
       </article>
-    </div> -->
+    </div>
   </main>
 </template>
 

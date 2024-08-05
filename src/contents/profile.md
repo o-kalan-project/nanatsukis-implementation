@@ -3,7 +3,7 @@
 | /kvtable       |                                      |
 | -------------- | ------------------------------------ |
 | 名前           | 応歌ラン                             |
-| CV             | 未定                                 |
+| CV             | <a href="https://x.com/unknownlemon93" target="_blank" rel="noopener noreferrer">無名れも</a>|
 | 誕生日         | 8月5日（ニコニコが復活した日） |
 | 愛称           | 不明                                 |
 | 身長           | 155cm                                |
