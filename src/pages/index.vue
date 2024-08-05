@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { useHead } from "@unhead/vue";
-import portrait from "@/assets/portrait.webp?h=480;960;1080&as=srcset&imagetools";
 import favicon from "@/assets/favicon.webp";
+import portrait from "@/assets/portrait.webp?h=480;960;1080&as=srcset&imagetools";
 import PageTitle from "@/components/PageTitle.vue";
 import Paragraph from "@/components/Paragraph.vue";
+import { useHead } from "@unhead/vue";
 import { onMounted, ref } from "vue";
 
 const videoId = ref<string | undefined>();
 onMounted(() => {
   // 動画ガチャ
-  const videoIds = ["sm43690833"];
+  const videoIds = ["sm43887822"];
   const randomIndex = Math.floor(Math.random() * videoIds.length);
   videoId.value = videoIds[randomIndex];
 });
