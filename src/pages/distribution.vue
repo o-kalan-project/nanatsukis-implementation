@@ -54,8 +54,6 @@ const agreeHref = computed(() => {
           <a
             class="button download-button"
             :class="{ disabled: true }"
-            :href="agreeHref && 'https://example.com'"
-            target="_blank"
           >
             <budoux-ja><!--連続音音源をダウンロード-->現在準備中</budoux-ja>
           </a>
@@ -70,8 +68,6 @@ const agreeHref = computed(() => {
           <a
             class="button download-button"
             :class="{ disabled: true }"
-            :href="agreeHref && 'https://example.com'"
-            target="_blank"
           >
             <!--（ダウンロード -->
             現在準備中
@@ -89,8 +85,6 @@ const agreeHref = computed(() => {
           <a
             class="button download-button"
             :class="{ disabled: true }"
-            :href="agreeHref && 'https://example.com'"
-            target="_blank"
           >
             <!-- ダウンロード -->
             現在準備中
