@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useHead } from "@unhead/vue";
 import Markdown from "@/components/Markdown.vue";
-import profile from "@/contents/profile.md?raw";
 import PageTitle from "@/components/PageTitle.vue";
+import profile from "@/contents/profile.md?raw";
+import { useHead } from "@unhead/vue";
 
 useHead({
   title: "このキャラクターについて | 応歌ラン",
@@ -19,7 +19,7 @@ useHead({
     <main class="main-content">
       <PageTitle>このキャラクターについて</PageTitle>
       <iframe
-        src="https://embed.nicovideo.jp/watch/sm43690833"
+        src="https://embed.nicovideo.jp/watch/sm43887822"
         class="max-md:w-full lg:h-[40vh] mx-auto aspect-video"
       />
       <Markdown :source="profile" />
