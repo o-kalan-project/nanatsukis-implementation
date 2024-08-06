@@ -39,11 +39,11 @@ useHead({
   >
     <div
       :class="[
-        'flex justify-center flex-col',
+        'flex justify-center flex-col border-box',
         'lg:pl-4 lg:w-2/5',
         'max-lg:w-full max-lg:px-4',
-        'max-md:-mt-20',
-        'md:-mt-28',
+        'max-md:pb-20',
+        'md:pb-28',
       ]"
     >
       <PageTitle>応歌ランとは</PageTitle>
