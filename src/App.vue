@@ -12,6 +12,10 @@ useHead({
       name: "theme-color",
       content: "#f6baca",
     },
+    {
+      property: "og:type",
+      content: "website",
+    },
   ],
 });
 
