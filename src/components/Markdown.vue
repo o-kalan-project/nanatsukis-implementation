@@ -69,7 +69,7 @@ const html = marked.parse(props.source) as string;
     @apply my-2;
   }
   a {
-    @apply text-theme-500 hover:text-theme-700 underline;
+    @apply link;
   }
   strong {
     @apply text-theme-base theme-shadow;

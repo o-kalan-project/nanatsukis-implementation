@@ -19,7 +19,7 @@ const emit = defineEmits<{
     <CheckboxRoot
       :modelValue="props.modelValue"
       @update:checked="($event) => emit('update:modelValue', $event)"
-      class="aspect-square h-5 w-5 bg-white outline outline-[1px] hover:outline-2 outline-theme-base rounded-sm inline-block relative contain-strict"
+      class="aspect-square h-5 w-5 bg-white outline outline-[1px] mouse:hover:outline-2 outline-theme-base rounded-sm inline-block relative contain-strict"
     >
       <Transition name="fade">
         <CheckboxIndicator>

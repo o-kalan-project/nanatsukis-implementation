@@ -5,8 +5,31 @@
     <link rel="icon" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>応歌ラン</title>
+    <style>
+      #loading {
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        display: grid;
+        place-items: center;
+        font-size: 24px;
+        color: #ed7f9f;
+        font-family: sans-serif;
+
+        transition: opacity 0.5s;
+      }
+      #loading.done {
+        opacity: 0;
+        pointer-events: none;
+      }
+    </style>
   </head>
   <body>
+    <div id="loading">Loading...</div>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>

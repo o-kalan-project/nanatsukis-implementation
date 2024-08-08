@@ -31,6 +31,13 @@ const onScroll = () => {
 
 onMounted(() => {
   window.addEventListener("scroll", onScroll);
+
+  const loading = document.querySelector("#loading");
+  if (!loading) throw new Error("Loading element not found");
+  loading.classList.add("done");
+  loading.addEventListener("transitionend", () => {
+    loading.remove();
+  });
 });
 
 onUnmounted(() => {
