@@ -17,7 +17,6 @@ useHead({
 });
 const base = import.meta.env.BASE_URL;
 const agree = ref(false);
-console.log(mainfile);
 const agreeHref = ((ist: Boolean) => {
   return agree.value && !ist ? true : undefined;
 });
