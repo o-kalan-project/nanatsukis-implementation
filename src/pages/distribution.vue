@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import avatarImage from "@/assets/distribution/avatar.webp?w=250;500;750;1000&as=srcset&imagetools";
-import coeiroinkImage from "@/assets/distribution/coeiroink.webp?w=250;500;750;1000&as=srcset&imagetools";
-import utauImage from "@/assets/distribution/utau.webp?w=250;500;750;1000&as=srcset&imagetools";
+import mainfile from "@/assets/mainfile.yml";
 import Checkbox from "@/components/Checkbox.vue";
 import PageTitle from "@/components/PageTitle.vue";
 import Paragraph from "@/components/Paragraph.vue";
 import { useHead } from "@unhead/vue";
-import { computed, ref } from "vue";
+import { ref } from "vue";
 import { RouterLink } from "vue-router";
 useHead({
   title: "素材配布 | 応歌ラン",
@@ -17,11 +15,11 @@ useHead({
     },
   ],
 });
-
+const base = import.meta.env.BASE_URL;
 const agree = ref(false);
-
-const agreeHref = computed(() => {
-  return agree.value ? true : undefined;
+console.log(mainfile);
+const agreeHref = ((ist: Boolean) => {
+  return agree.value && !ist ? true : undefined;
 });
 </script>
 <template>
@@ -34,60 +32,23 @@ const agreeHref = computed(() => {
       </Checkbox>
     </div>
     <div class="flex flex-wrap gap-2 mt-2">
-      <article class="card">
-        <h2>UTAU音源</h2>
-        <img :srcset="utauImage" />
+      <article class="card"  v-for="(contents,dist_name) in mainfile">
+        <h2>{{ dist_name }}</h2>
+        <img :srcset="base + 'distribution/' + contents['image'] + '.webp'" />
         <div class="flex-grow" />
         <Paragraph>
           <!-- UTAUで使える音源です。単独音・連続音を用意しています。 -->
-           UTAUで使える音源です。現在は単独音のみが利用可能です。
+           {{ contents["description"] }}
         </Paragraph>
         <div class="download-section">
           <a
+            v-for="(button_attribute,button_text) in contents['button']"
             class="button download-button"
-            :class="{ disabled: !agree }"
-            :href="agreeHref && 'https://github.com/o-kalan-project/o-ka-utau/releases/latest/download/O-kalan-CV.zip'"
+            :class="{ disabled: button_attribute['disabled'] || !agree}"
+            :href="agreeHref(button_attribute['disabled']) && button_attribute['url']"
             target="_blank"
           >
-            <budoux-ja>単独音音源をダウンロード</budoux-ja>
-          </a>
-          <a
-            class="button download-button"
-            :class="{ disabled: true }"
-          >
-            <budoux-ja><!--連続音音源をダウンロード-->現在準備中</budoux-ja>
-          </a>
-        </div>
-      </article>
-      <article class="card">
-        <h2>MyCoe</h2>
-        <img :srcset="coeiroinkImage" />
-        <div class="flex-grow" />
-        <Paragraph> Coeiroinkで使える音源です。 </Paragraph>
-        <div class="download-section">
-          <a
-            class="button download-button"
-            :class="{ disabled: true }"
-          >
-            <!--（ダウンロード -->
-            現在準備中
-          </a>
-        </div>
-      </article>
-      <article class="card">
-        <h2>立ち絵素材</h2>
-        <img :srcset="avatarImage" />
-        <div class="flex-grow" />
-        <Paragraph
-          >実況などに使える立ち絵素材です。<!--（TODO：ちゃんとした画像を用意する、YMMとか？）--></Paragraph
-        >
-        <div class="download-section">
-          <a
-            class="button download-button"
-            :class="{ disabled: true }"
-          >
-            <!-- ダウンロード -->
-            現在準備中
+            <budoux-ja>{{ button_text }}</budoux-ja>
           </a>
         </div>
       </article>
