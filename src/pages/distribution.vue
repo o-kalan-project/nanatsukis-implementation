@@ -38,7 +38,8 @@ const agree = ref(false);
         <div class="download-section">
           <a v-for="(buttonAttribute) in contents['button']" class="button download-button"
             :class="{ disabled: buttonAttribute['disabled'] || !agree }"
-            :href="[agree && !buttonAttribute['disabled'] ? true : undefined] && buttonAttribute['url']" target="_blank">
+            :href="[agree && !buttonAttribute['disabled'] ? true : undefined] && buttonAttribute['url']"
+            target="_blank">
             <budoux-ja>{{ buttonAttribute["name"] }}</budoux-ja>
           </a>
         </div>
