@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import mainfile from "@/assets/mainfile.yml";
 import Checkbox from "@/components/Checkbox.vue";
 import PageTitle from "@/components/PageTitle.vue";
 import Paragraph from "@/components/Paragraph.vue";
+import distindex from "@/contents/distindex.yml";
 import { useHead } from "@unhead/vue";
 import { ref } from "vue";
 import { RouterLink } from "vue-router";
@@ -17,9 +17,6 @@ useHead({
 });
 const base = import.meta.env.BASE_URL;
 const agree = ref(false);
-const agreeHref = ((ist: Boolean) => {
-  return agree.value && !ist ? true : undefined;
-});
 </script>
 <template>
   <main class="main-content">
@@ -31,23 +28,18 @@ const agreeHref = ((ist: Boolean) => {
       </Checkbox>
     </div>
     <div class="flex flex-wrap gap-2 mt-2">
-      <article class="card"  v-for="(contents,dist_name) in mainfile">
-        <h2>{{ dist_name }}</h2>
-        <img :srcset="base + 'distribution/' + contents['image'] + '.webp'" />
+      <article class="card" v-for="(contents) in distindex">
+        <h2>{{ contents["name"] }}</h2>
+        <img :src="`${base}distribution/${contents['image']}.webp`" />
         <div class="flex-grow" />
         <Paragraph>
-          <!-- UTAUで使える音源です。単独音・連続音を用意しています。 -->
-           {{ contents["description"] }}
+          {{ contents["description"] }}
         </Paragraph>
         <div class="download-section">
-          <a
-            v-for="(button_attribute,button_text) in contents['button']"
-            class="button download-button"
-            :class="{ disabled: button_attribute['disabled'] || !agree}"
-            :href="agreeHref(button_attribute['disabled']) && button_attribute['url']"
-            target="_blank"
-          >
-            <budoux-ja>{{ button_text }}</budoux-ja>
+          <a v-for="(buttonAttribute) in contents['button']" class="button download-button"
+            :class="{ disabled: buttonAttribute['disabled'] || !agree }"
+            :href="[agree && !buttonAttribute['disabled'] ? true : undefined] && buttonAttribute['url']" target="_blank">
+            <budoux-ja>{{ buttonAttribute["name"] }}</budoux-ja>
           </a>
         </div>
       </article>
@@ -64,7 +56,7 @@ const agreeHref = ((ist: Boolean) => {
   }
 
   img {
-    @apply w-full  drop-shadow-md;
+    @apply w-full drop-shadow-md;
     @apply lg:aspect-video lg:object-contain;
   }
 
