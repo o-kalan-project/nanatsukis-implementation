@@ -2,7 +2,7 @@
 import Checkbox from "@/components/Checkbox.vue";
 import PageTitle from "@/components/PageTitle.vue";
 import Paragraph from "@/components/Paragraph.vue";
-import distindex from "@/contents/distindex.yml";
+import distributionIndex from "@/contents/distributionIndex.yml";
 import { useHead } from "@unhead/vue";
 import { ref } from "vue";
 import { RouterLink } from "vue-router";
@@ -28,7 +28,7 @@ const agree = ref(false);
       </Checkbox>
     </div>
     <div class="flex flex-wrap gap-2 mt-2">
-      <article class="card" v-for="(contents) in distindex">
+      <article class="card" v-for="(contents) in distributionIndex">
         <h2>{{ contents["name"] }}</h2>
         <img :src="`${base}distribution/${contents['image']}.webp`" />
         <div class="flex-grow" />
@@ -38,7 +38,7 @@ const agree = ref(false);
         <div class="download-section">
           <a v-for="(buttonAttribute) in contents['button']" class="button download-button"
             :class="{ disabled: buttonAttribute['disabled'] || !agree }"
-            :href="[agree && !buttonAttribute['disabled'] ? true : undefined] && buttonAttribute['url']"
+            :href="(agree && !buttonAttribute['disabled'] ? true : undefined) && buttonAttribute['url']"
             target="_blank">
             <budoux-ja>{{ buttonAttribute["name"] }}</budoux-ja>
           </a>
