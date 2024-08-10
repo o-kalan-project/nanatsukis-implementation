@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import avatarImage from "@/assets/distribution/avatar.webp?w=250;500;750;1000&as=srcset&imagetools";
-import coeiroinkImage from "@/assets/distribution/coeiroink.webp?w=250;500;750;1000&as=srcset&imagetools";
-import utauImage from "@/assets/distribution/utau.webp?w=250;500;750;1000&as=srcset&imagetools";
 import Checkbox from "@/components/Checkbox.vue";
 import PageTitle from "@/components/PageTitle.vue";
 import Paragraph from "@/components/Paragraph.vue";
+import distributionIndex from "@/contents/distributionIndex.yml";
 import { useHead } from "@unhead/vue";
-import { computed, ref } from "vue";
+import { ref } from "vue";
 import { RouterLink } from "vue-router";
 useHead({
   title: "素材配布 | 応歌ラン",
@@ -17,12 +15,8 @@ useHead({
     },
   ],
 });
-
+const base = import.meta.env.BASE_URL;
 const agree = ref(false);
-
-const agreeHref = computed(() => {
-  return agree.value ? true : undefined;
-});
 </script>
 <template>
   <main class="main-content">
@@ -34,60 +28,19 @@ const agreeHref = computed(() => {
       </Checkbox>
     </div>
     <div class="flex flex-wrap gap-2 mt-2">
-      <article class="card">
-        <h2>UTAU音源</h2>
-        <img :srcset="utauImage" />
+      <article class="card" v-for="(contents) in distributionIndex">
+        <h2>{{ contents["name"] }}</h2>
+        <img :src="`${base}distribution/${contents['image']}.webp`" />
         <div class="flex-grow" />
         <Paragraph>
-          <!-- UTAUで使える音源です。単独音・連続音を用意しています。 -->
-           UTAUで使える音源です。現在は単独音のみが利用可能です。
+          {{ contents["description"] }}
         </Paragraph>
         <div class="download-section">
-          <a
-            class="button download-button"
-            :class="{ disabled: !agree }"
-            :href="agreeHref && 'https://github.com/o-kalan-project/o-ka-utau/releases/latest/download/O-kalan-CV.zip'"
-            target="_blank"
-          >
-            <budoux-ja>単独音音源をダウンロード</budoux-ja>
-          </a>
-          <a
-            class="button download-button"
-            :class="{ disabled: true }"
-          >
-            <budoux-ja><!--連続音音源をダウンロード-->現在準備中</budoux-ja>
-          </a>
-        </div>
-      </article>
-      <article class="card">
-        <h2>MyCoe</h2>
-        <img :srcset="coeiroinkImage" />
-        <div class="flex-grow" />
-        <Paragraph> Coeiroinkで使える音源です。 </Paragraph>
-        <div class="download-section">
-          <a
-            class="button download-button"
-            :class="{ disabled: true }"
-          >
-            <!--（ダウンロード -->
-            現在準備中
-          </a>
-        </div>
-      </article>
-      <article class="card">
-        <h2>立ち絵素材</h2>
-        <img :srcset="avatarImage" />
-        <div class="flex-grow" />
-        <Paragraph
-          >実況などに使える立ち絵素材です。<!--（TODO：ちゃんとした画像を用意する、YMMとか？）--></Paragraph
-        >
-        <div class="download-section">
-          <a
-            class="button download-button"
-            :class="{ disabled: true }"
-          >
-            <!-- ダウンロード -->
-            現在準備中
+          <a v-for="(buttonAttribute) in contents['button']" class="button download-button"
+            :class="{ disabled: buttonAttribute['disabled'] || !agree }"
+            :href="(agree && !buttonAttribute['disabled'] ? true : undefined) && buttonAttribute['url']"
+            target="_blank">
+            <budoux-ja>{{ buttonAttribute["name"] }}</budoux-ja>
           </a>
         </div>
       </article>
@@ -104,7 +57,7 @@ const agreeHref = computed(() => {
   }
 
   img {
-    @apply w-full  drop-shadow-md;
+    @apply w-full drop-shadow-md;
     @apply lg:aspect-video lg:object-contain;
   }
 
