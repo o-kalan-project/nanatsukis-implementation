@@ -13,8 +13,15 @@
   image: coeiroink
   description: Coeiroinkで​使える​音源です。
   button:
+    - name: MYCOEIROINKをダウンロード
+      url: https://drive.usercontent.google.com/download?id=1VE4hcge5-xjxZayl1X3GHvxGPDVeDB3x&export=download&authuser=1&confirm=t&uuid=fc49d460-6793-4114-a508-911fe84d3a2c&at=APZUnTXFC6c4jUzk3tCBP3F9YRV7%3A1723609434145
+      disabled: false
+- name: RVC
+  image: noimage
+  description: RVCで​使える​音源です。
+  button:
     - name: 現在準備中
-      url:
+      url: 
       disabled: true
 
 - name: 立ち絵素材
