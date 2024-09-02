@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { CheckboxIndicator, CheckboxRoot } from "radix-vue";
-import { Transition } from "vue";
+//import { Transition } from "vue";
 
 defineOptions({
   inheritAttrs: false,
