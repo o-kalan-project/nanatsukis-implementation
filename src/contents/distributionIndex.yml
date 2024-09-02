@@ -1,4 +1,4 @@
-- name: UTAU音源
+- name: "[Official]UTAU音源"
   image: utau
   description: UTAUで​使える​音源です。​現在は​単独音のみが​利用可能です。​
   button:
@@ -9,7 +9,7 @@
       url:
       disabled: true
 
-- name: MyCoe
+- name: "[Official]MYCOEIROINK"
   image: coeiroink
   description: Coeiroinkで​使える​音源です。
   button:
@@ -24,10 +24,10 @@
       url: 
       disabled: true
 
-- name: 立ち絵素材
-  image: avatar
+- name: "[Official]ふぃる式立ち絵素材"
+  image: filavatar
   description: 実況などに​使える​立ち絵素材です。
   button:
-    - name: 現在準備中
-      url:
-      disabled: true
+    - name: 立ち絵素材をダウンロード
+      url: https://github.com/o-kalan-project/o-kalan-artifacts/releases/latest/download/official_fil_o-kalan_avatar.zip
+      disabled: false
