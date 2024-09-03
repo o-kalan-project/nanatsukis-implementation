@@ -20,6 +20,9 @@ importers:
       '@unhead/vue':
         specifier: ^1.9.16
         version: 1.9.16(vue@3.4.35(typescript@5.5.4))
+      base64-js:
+        specifier: ^1.5.1
+        version: 1.5.1
       budoux:
         specifier: ^0.6.2
         version: 0.6.2
@@ -69,6 +72,9 @@ importers:
       vite-imagetools:
         specifier: ^7.0.4
         version: 7.0.4(rollup@4.20.0)
+      vite-plugin-arraybuffer:
+        specifier: ^0.0.8
+        version: 0.0.8
       vite-ssg:
         specifier: ^0.23.8
         version: 0.23.8(vite@5.3.5(@types/node@20.14.14)(sass@1.77.8)(terser@5.31.3))(vue-router@4.4.2(vue@3.4.35(typescript@5.5.4)))(vue@3.4.35(typescript@5.5.4))
@@ -698,6 +704,9 @@ packages:
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
+
+  base64-js@1.5.1:
+    resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
 
   bidi-js@1.0.3:
     resolution: {integrity: sha512-RKshQI1R3YQ+n9YJz2QQ147P66ELpa1FQEg20Dk8oW9t2KgLbpDLLp9aGZ7y8WHSshDknG0bknqGw5/tyCs5tw==}
@@ -1480,6 +1489,9 @@ packages:
     resolution: {integrity: sha512-C9C7b2p/8/TCN2g26tE9haoer2i8K4x0v2RXUiHsIjiz221vQuKItCQ+VyiVCsUMPXfJC/tlZsmCZVBz5jh7uA==}
     engines: {node: '>=18.0.0'}
 
+  vite-plugin-arraybuffer@0.0.8:
+    resolution: {integrity: sha512-F+InDQuxd93YDVRdXTjBr3lydgjyVHSpgRZS4izK/i85Anl5kmbvf2NwJ//XHAccHh1TScfX70MFJfBx/rf3cg==}
+
   vite-ssg@0.23.8:
     resolution: {integrity: sha512-uWjdxL2PrvmbUxj7K+YFR8hTuhUZ90r2PrP73evsN/XarjQzKvIbbopqczyGUSAdRXggN3C4sdnk4jqDOGbF4A==}
     engines: {node: '>=14.0.0'}
@@ -2177,6 +2189,8 @@ snapshots:
       postcss-value-parser: 4.2.0
 
   balanced-match@1.0.2: {}
+
+  base64-js@1.5.1: {}
 
   bidi-js@1.0.3:
     dependencies:
@@ -3050,6 +3064,8 @@ snapshots:
       sharp: 0.33.4
     transitivePeerDependencies:
       - rollup
+
+  vite-plugin-arraybuffer@0.0.8: {}
 
   vite-ssg@0.23.8(vite@5.3.5(@types/node@20.14.14)(sass@1.77.8)(terser@5.31.3))(vue-router@4.4.2(vue@3.4.35(typescript@5.5.4)))(vue@3.4.35(typescript@5.5.4)):
     dependencies:

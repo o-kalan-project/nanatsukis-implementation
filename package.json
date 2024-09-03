@@ -13,6 +13,7 @@
     "@heroicons/vue": "^2.1.5",
     "@rollup/plugin-yaml": "^4.1.2",
     "@unhead/vue": "^1.9.16",
+    "base64-js": "^1.5.1",
     "budoux": "^0.6.2",
     "marked": "^13.0.3",
     "primeicons": "^7.0.0",
@@ -31,6 +32,7 @@
     "unplugin-vue-router": "^0.10.2",
     "vite": "^5.3.5",
     "vite-imagetools": "^7.0.4",
+    "vite-plugin-arraybuffer": "^0.0.8",
     "vite-ssg": "^0.23.8",
     "vue-tsc": "^2.0.29"
   }

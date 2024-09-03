@@ -1,8 +1,9 @@
-import yaml from '@rollup/plugin-yaml';
+import yaml from "@rollup/plugin-yaml";
 import vue from "@vitejs/plugin-vue";
 import vueRouter from "unplugin-vue-router/vite";
 import { defineConfig } from "vite";
 import { imagetools } from "vite-imagetools";
+import arraybuffer from "vite-plugin-arraybuffer";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -17,6 +18,7 @@ export default defineConfig({
     }),
     imagetools(),
     yaml(),
+    arraybuffer(),
   ],
   resolve: {
     alias: {
