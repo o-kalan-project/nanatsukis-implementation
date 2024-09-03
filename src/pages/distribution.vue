@@ -2,10 +2,19 @@
 import Checkbox from "@/components/Checkbox.vue";
 import PageTitle from "@/components/PageTitle.vue";
 import Paragraph from "@/components/Paragraph.vue";
-import distributionIndex from "@/contents/distributionIndex.yml";
+import distributionIndexRaw from "@/contents/distributionIndex.yml";
 import { useHead } from "@unhead/vue";
 import { ref } from "vue";
 import { RouterLink } from "vue-router";
+
+const distributionIndex = distributionIndexRaw as {
+  name: string;
+  official?: boolean;
+  image: string;
+  description: string;
+  button: { name: string; url: string; disabled?: boolean }[];
+}[];
+
 useHead({
   title: "素材配布 | 応歌ラン",
   meta: [
@@ -28,19 +37,32 @@ const agree = ref(false);
       </Checkbox>
     </div>
     <div class="flex flex-wrap gap-2 mt-2">
-      <article class="card" v-for="(contents) in distributionIndex">
-        <h2>{{ contents["name"] }}</h2>
-        <img :src="`${base}distribution/${contents['image']}.webp`" />
+      <article class="card" v-for="content in distributionIndex">
+        <h2 className="flex">
+          <div
+            v-if="content.official"
+            class="bg-theme-base text-white rounded px-2 grid place-items-center mr-2 text-sm"
+            >公式</div
+          >
+          <budoux-ja>{{ content.name }}</budoux-ja>
+        </h2>
+        <img :src="`${base}distribution/${content.image}.webp`" />
         <div class="flex-grow" />
         <Paragraph>
-          {{ contents["description"] }}
+          {{ content.description }}
         </Paragraph>
         <div class="download-section">
-          <a v-for="(buttonAttribute) in contents['button']" class="button download-button"
-            :class="{ disabled: buttonAttribute['disabled'] || !agree }"
-            :href="(agree && !buttonAttribute['disabled'] ? true : undefined) && buttonAttribute['url']"
-            target="_blank">
-            <budoux-ja>{{ buttonAttribute["name"] }}</budoux-ja>
+          <a
+            v-for="buttonAttribute in content.button"
+            class="button download-button"
+            :class="{ disabled: buttonAttribute.disabled || !agree }"
+            :href="
+              (agree && !buttonAttribute.disabled ? true : undefined) &&
+              buttonAttribute.url
+            "
+            target="_blank"
+          >
+            <budoux-ja>{{ buttonAttribute.name }}</budoux-ja>
           </a>
         </div>
       </article>

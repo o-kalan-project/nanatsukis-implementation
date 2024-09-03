@@ -1,33 +1,37 @@
-- name: "[Official]UTAU音源"
+- name: "UTAU音源"
+  official: true
   image: utau
-  description: UTAUで​使える​音源です。​現在は​単独音のみが​利用可能です。​
+  description: UTAUで使える音源です。現在は単独音のみが利用可能です。
   button:
-    - name: 単独音音源を​ダウンロード
+    - name: 単独音音源をダウンロード
       url: https://github.com/o-kalan-project/o-ka-utau/releases/latest/download/O-kalan-CV.zip
       disabled: false
     - name: 現在準備中
       url:
       disabled: true
 
-- name: "[Official]MYCOEIROINK"
+- name: "MYCOEIROINK"
+  official: true
   image: coeiroink
-  description: Coeiroinkで​使える​音源です。
+  description: Coeiroinkで使える音源です。
   button:
     - name: MYCOEIROINKをダウンロード
       url: https://drive.usercontent.google.com/download?id=1VE4hcge5-xjxZayl1X3GHvxGPDVeDB3x&export=download&authuser=1&confirm=t&uuid=fc49d460-6793-4114-a508-911fe84d3a2c&at=APZUnTXFC6c4jUzk3tCBP3F9YRV7%3A1723609434145
       disabled: false
-- name: RVC
-  image: noimage
-  description: RVCで​使える​音源です。
-  button:
-    - name: 現在準備中
-      url: 
-      disabled: true
 
-- name: "[Official]ふぃる式立ち絵素材"
+- name: "ふぃる式立ち絵素材"
+  official: true
   image: filavatar
-  description: 実況などに​使える​立ち絵素材です。
+  description: 実況などに使える立ち絵素材です。
   button:
     - name: 立ち絵素材をダウンロード
       url: https://github.com/o-kalan-project/o-kalan-artifacts/releases/latest/download/official_fil_o-kalan_avatar.zip
       disabled: false
+
+- name: RVC
+  image: noimage
+  description: RVCで使える音源です。
+  button:
+    - name: 現在準備中
+      url:
+      disabled: true
