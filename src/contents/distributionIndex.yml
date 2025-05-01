@@ -19,13 +19,13 @@
       url: https://drive.usercontent.google.com/download?id=1VE4hcge5-xjxZayl1X3GHvxGPDVeDB3x&export=download&authuser=1&confirm=t&uuid=fc49d460-6793-4114-a508-911fe84d3a2c&at=APZUnTXFC6c4jUzk3tCBP3F9YRV7%3A1723609434145
       disabled: false
 
-- name: "ふぃる式立ち絵素材"
+- name: "ふぃる式立ち絵素材（v2）"
   official: true
-  image: filavatar
+  image: filavatar_v2
   description: 実況などに使える立ち絵素材です。
   button:
     - name: 立ち絵素材をダウンロード
-      url: https://github.com/o-kalan-project/o-kalan-artifacts/releases/latest/download/official_fil_o-kalan_avatar.zip
+      url: https://github.com/o-kalan-project/o-kalan-artifacts/releases/latest/download/official_fil_o-kalan_avatar_v2.zip
       disabled: false
 
 - name: RVC
@@ -35,3 +35,12 @@
     - name: 現在準備中
       url:
       disabled: true
+
+- name: "ふぃる式立ち絵素材"
+  official: true
+  image: filavatar
+  description: 実況などに使える立ち絵素材です。
+  button:
+    - name: 立ち絵素材をダウンロード
+      url: https://github.com/o-kalan-project/o-kalan-artifacts/releases/latest/download/official_fil_o-kalan_avatar.zip
+      disabled: false
