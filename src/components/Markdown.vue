@@ -11,7 +11,6 @@ originalRenderer.parser = new Parser();
 
 marked.use({
   breaks: true,
-  useNewRenderer: true,
   renderer: {
     // headingを一段階下げる
     heading({ text, depth }) {

@@ -1,17 +1,12 @@
 import "@fontsource/zen-kaku-gothic-new/400.css";
 import "@fontsource/zen-kaku-gothic-new/500.css";
 import "@fontsource/zen-kaku-gothic-new/700.css";
+import "budoux"
 import "./style.scss";
 import "primeicons/primeicons.css";
 import { handleHotUpdate, routes } from "vue-router/auto-routes";
 import { ViteSSG } from "vite-ssg";
 import App from "./App.vue";
-
-(async () => {
-  if (typeof window === "undefined") return;
-
-  import("budoux/module/webcomponents/budoux-ja");
-})();
 
 export const createApp = ViteSSG(
   App,
