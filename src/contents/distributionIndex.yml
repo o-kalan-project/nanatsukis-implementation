@@ -44,3 +44,11 @@
     - name: 立ち絵素材をダウンロード
       url: https://github.com/o-kalan-project/o-kalan-artifacts/releases/latest/download/official_fil_o-kalan_avatar.zip
       disabled: false
+- name: "応歌ラン公式ロゴ"
+  official: true
+  image: avatar
+  description: 応歌ランを使用した動画などに使えるロゴ素材です。
+  button:
+    - name: ロゴをダウンロード
+      url: https://github.com/o-kalan-project/o-kalan-artifacts/releases/latest/download/official_o-kalan_logo.png
+      disabled: false

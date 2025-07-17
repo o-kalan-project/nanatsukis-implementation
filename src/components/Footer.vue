@@ -10,7 +10,7 @@ const links = [
     class="w-[calc(100%_-_2rem)] box-border mx-4 py-4 mt-4 border-t-[1px] border-slate-500/50 grid place-content-center"
   >
     <small>
-      &copy; 2024 桜花爛漫<template v-for="link in links" :key="link.text">
+      &copy; 2024 - 2025 桜花爛漫<template v-for="link in links" :key="link.text">
         <span class="px-2">|</span>
         <a
           class="link"
