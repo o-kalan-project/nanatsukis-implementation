@@ -1,14 +1,14 @@
 - name: "UTAU音源"
   official: true
   image: utau
-  description: UTAUで使える音源です。現在は単独音のみが利用可能です。
+  description: UTAUで使える音源です。
   button:
     - name: 単独音音源をダウンロード
       url: https://github.com/o-kalan-project/o-ka-utau/releases/latest/download/O-kalan-CV.zip
       disabled: false
-    - name: 現在準備中
-      url:
-      disabled: true
+    - name: 連続音音源をダウンロード
+      url: https://github.com/o-kalan-project/o-ka-utau/releases/latest/download/O-kalan-VCV.zip
+      disabled: false
 
 - name: "MYCOEIROINK"
   official: true

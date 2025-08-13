@@ -84,7 +84,7 @@ const agree = ref(false);
   }
 
   .download-section {
-    @apply flex pt-2 border-theme-200 border-t-[1px] gap-2;
+    @apply flex flex-wrap pt-2 border-theme-200 border-t-[1px] gap-2;
   }
 
   .download-button {
