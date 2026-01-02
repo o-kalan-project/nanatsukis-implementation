@@ -12,7 +12,7 @@
 
 - name: "MYCOEIROINK"
   official: true
-  image: coeiroink
+  image: coeiroink2
   description: Coeiroinkで使える音源です。
   button:
     - name: バージョン1をダウンロード
