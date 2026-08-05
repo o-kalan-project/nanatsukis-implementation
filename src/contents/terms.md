@@ -19,11 +19,11 @@
 **A：** 以下のクレジットの明記をお願いします。
 公式イラスト：
 
-> ©2024 Fil, Sabita All Rights Reserved.
+> ©2026 Fil, Sabita All Rights Reserved.
 
 ロゴ：
 
-> ©2024 kokutou All Rights Reserved.
+> ©2026 kokutou All Rights Reserved.
 
 説明欄や画像、動画のいずれかに入っていれば大丈夫です！
 
@@ -73,11 +73,11 @@
 
 公式イラスト：
 
-> ©2024 Fil, Sabita All Rights Reserved.
+> ©2026 Fil, Sabita All Rights Reserved.
 
 ロゴ：
 
-> ©2024 kokutou All Rights Reserved.
+> ©2026 kokutou All Rights Reserved.
 
 - 応歌ランの利用にあたり、利用者間、または利用者と第三者との間で問題が生じた場合、当サークルは一切の責任を負いません。
   利用規約の変更や追加によって起こった問題も同じです。
