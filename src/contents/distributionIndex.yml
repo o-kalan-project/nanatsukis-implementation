@@ -15,28 +15,11 @@
   image: coeiroink2
   description: Coeiroinkで使える音源です。
   button:
-    - name: バージョン1をダウンロード
+    - name: (非推奨)v1をダウンロード
       url: https://github.com/o-kalan-project/coeiro-lan/releases/download/v1/o-kalan_v1.zip
       disabled: false
-#    - name: バージョン2をダウンロード
-#      url: https://github.com/o-kalan-project/coeiro-lan/releases/download/v2/o-kalan_v2.zip
-#      disabled: true
-
-- name: "ふぃる式立ち絵素材（v2）"
-  official: true
-  image: filavatar_v2
-  description: 実況などに使える立ち絵素材です。
-  button:
-    - name: 立ち絵素材をダウンロード
-      url: https://github.com/o-kalan-project/o-kalan-artifacts/releases/latest/download/official_fil_o-kalan_avatar_v2.zip
-      disabled: false
-
-- name: RVC
-  image: noimage
-  description: RVCで使える音源です。
-  button:
-    - name: 現在準備中
-      url:
+    - name: v2をダウンロード
+      url: https://github.com/o-kalan-project/coeiro-lan/releases/download/v2/o-kalan_v2.zip
       disabled: true
 
 - name: "ふぃる式立ち絵素材"
@@ -47,6 +30,33 @@
     - name: 立ち絵素材をダウンロード
       url: https://github.com/o-kalan-project/o-kalan-artifacts/releases/latest/download/official_fil_o-kalan_avatar.zip
       disabled: false
+
+- name: "ふぃる式立ち絵素材（v2）"
+  official: true
+  image: filavatar_v2
+  description: 実況などに使える立ち絵素材です。
+  button:
+    - name: 立ち絵素材をダウンロード
+      url: https://github.com/o-kalan-project/o-kalan-artifacts/releases/latest/download/official_fil_o-kalan_avatar_v2.zip
+      disabled: false
+
+- name: "Lv.0式三面図素材"
+  official: true
+  image: noimage
+  description: 応歌ランの三面図です。イラスト等を書く際の参考におすすめです。
+  button:
+    - name: 三面図をダウンロード
+      url: https://github.com/o-kalan-project/o-kalan-artifacts/releases/latest/download/official_lv_0_o-kalan_three_views.png
+      disabled: false
+
+- name: RVC
+  image: noimage
+  description: RVCで使える音源です。
+  button:
+    - name: 現在準備中
+      url:
+      disabled: true
+
 - name: "応歌ラン公式ロゴ"
   official: true
   image: avatar
