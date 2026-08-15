@@ -20,7 +20,7 @@
       disabled: false
     - name: v2をダウンロード
       url: https://github.com/o-kalan-project/coeiro-lan/releases/download/v2/o-kalan_v2.zip
-      disabled: true
+      disabled: false
 
 - name: "ふぃる式立ち絵素材"
   official: true
