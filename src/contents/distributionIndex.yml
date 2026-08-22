@@ -1,7 +1,7 @@
-- name: "UTAU音源"
+- name: "応歌ラン UTAU音源"
   official: true
   image: utau
-  description: UTAUで使える音源です。
+  description: 応歌ランのUTAUで使える音源です。
   button:
     - name: 単独音音源をダウンロード
       url: https://github.com/o-kalan-project/o-ka-utau/releases/latest/download/O-kalan-CV.zip
@@ -9,6 +9,18 @@
     - name: 連続音音源をダウンロード
       url: https://github.com/o-kalan-project/o-ka-utau/releases/latest/download/O-kalan-VCV.zip
       disabled: false
+
+- name: "応歌ラン Re:turn UTAU音源"
+  official: true
+  image: utau
+  description: 応歌ラン Re:trunのUTAUで使える音源です。
+  button:
+    - name: 単独音音源をダウンロード
+      url: https://github.com/o-kalan-project/o-ka-utau/releases/latest/download/O-kalan_Re-turn-CV.zip
+      disabled: false
+    - name: 現在準備中
+      url: 
+      disabled: true
 
 - name: "MYCOEIROINK"
   official: true
@@ -42,7 +54,7 @@
 
 - name: "Lv.0式三面図素材"
   official: true
-  image: noimage
+  image: lv_0_three_views
   description: 応歌ランの三面図です。イラスト等を書く際の参考におすすめです。
   button:
     - name: 三面図をダウンロード
