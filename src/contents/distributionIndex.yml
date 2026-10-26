@@ -52,6 +52,15 @@
       url: https://github.com/o-kalan-project/o-kalan-artifacts/releases/latest/download/official_fil_o-kalan_avatar_v2.zip
       disabled: false
 
+- name: "ふぃる式立ち絵素材（v3）"
+  official: true
+  image: filavatar_v3
+  description: 実況などに使える立ち絵素材です。
+  button:
+    - name: 立ち絵素材をダウンロード
+      url: https://github.com/o-kalan-project/o-kalan-artifacts/releases/latest/download/official_fil_o-kalan_avatar_v3.zip
+      disabled: false
+
 - name: "Lv.0式三面図素材"
   official: true
   image: lv_0_three_views
